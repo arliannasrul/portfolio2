@@ -22,8 +22,10 @@ const StarBorder = ({
           animationDuration: speed,
         }}
       ></div>
-      <div href="https://docs.google.com/document/d/12aV7gNu7xec1ggA0ST0ZuRgXP4l-YyqYmqT4q6fcEIM/export?format=pdf" className="relative z-1 bg-[#6497B1]  border border-slate-500 text-white text-center text-xl font-semibold py-2 px-3 rounded-[20px] cursor-pointer">
+      <div className="relative z-1 bg-[#6497B1]  border border-slate-500 text-white text-center text-xl font-semibold py-2 px-3 rounded-[20px] cursor-pointer">
+        <a href="https://docs.google.com/document/d/12aV7gNu7xec1ggA0ST0ZuRgXP4l-YyqYmqT4q6fcEIM/export?format=pdf">
         {children}
+        </a>
       </div>
     </Component>
   );

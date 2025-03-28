@@ -70,8 +70,8 @@ export default function MusicPlayer() {
   };
 
   return (
-    <div className="fixed bottom-18 left-0 right-0 ">
-      <div className="  grid items-center grid-cols-6 gap-2 bg-white p-2  min-h-10 pr-4 border-y-1 border-blue-500">
+    <div className="fixed bottom-18 left-0 right-0 lg:translate-y-[95vh] lg:hidden  lg:w-96">
+      <div className="  grid items-center grid-cols-6 gap-2 lg:bg-slate-200 lg:rounded-2xl bg-white p-2  min-h-10 pr-4 border-y-1 lg:border-1 border-blue-500">
         <audio ref={audioRef} /> {/* ✅ Tambahkan elemen audio dalam JSX */}
         <Music className="text-blue-500" size={20} />
         <div className="col-span-2">
@@ -90,7 +90,7 @@ export default function MusicPlayer() {
         </button>
         <button
           onClick={togglePlayPause}
-          className="p-1 bg-blue-500 text-white rounded-full"
+          className="p-1 bg-blue-500 flex justify-center text-white rounded-full"
         >
           {isPlaying ? <Pause size={20} /> : <Play size={20} />}
         </button>
