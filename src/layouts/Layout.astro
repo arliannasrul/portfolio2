@@ -12,17 +12,18 @@ import Navbar from "../components/Navbar";
     <title>Arlian Nasrul Ramadhani</title>
   </head>
   <body>
-    <Navbar client:load />
-    <!------Hidration Astro----->
+    <Navbar client:load>
+      <!------Hidration Astro----->
+    </Navbar>
     <slot />
   </body>
-</html>
 
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>
+  <style>
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</html>
