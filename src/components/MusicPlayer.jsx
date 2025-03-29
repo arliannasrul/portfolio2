@@ -13,11 +13,29 @@ export default function MusicPlayer() {
   useEffect(() => {
     if (!audioRef.current) return;
     const audio = audioRef.current;
-    audio.src = songs[currentSongIndex].src;
-    audio.load();
+    
+    try {
+      // Gunakan blob URL untuk mencegah download
+      fetch(songs[currentSongIndex].src)
+        .then(response => response.blob())
+        .then(blob => {
+          const blobUrl = URL.createObjectURL(blob);
+          audio.src = blobUrl;
+          audio.type = "audio/mpeg";
+          
+          if (isPlaying) {
+            audio.play().catch((err) => console.log("Autoplay gagal:", err));
+          }
+        })
+        .catch(err => console.error("Error loading audio:", err));
 
-    if (isPlaying) {
-      audio.play().catch((err) => console.log("Autoplay gagal:", err));
+      return () => {
+        if (audio.src) {
+          URL.revokeObjectURL(audio.src);
+        }
+      };
+    } catch (err) {
+      console.error("Error setting up audio:", err);
     }
   }, [currentSongIndex]);
 
@@ -81,9 +99,11 @@ export default function MusicPlayer() {
       <div className="relative z-20 grid items-center grid-cols-6 gap-2 lg:bg-slate-200 lg:rounded-t-2xl bg-white p-2 min-h-10 pr-4 border-y-1 lg:border-1 border-[#6497b1]">
         <audio 
           ref={audioRef} 
-          preload="auto"
-          controlsList="nodownload" 
+          preload="none"
+          playsInline
+          controlsList="nodownload noplaybackrate"
           onContextMenu={(e) => e.preventDefault()}
+          style={{ display: 'none' }}
         />
         <Music className="text-[#6497b1]" size={20} />
         <div className="col-span-2">
