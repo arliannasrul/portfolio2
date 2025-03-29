@@ -22,91 +22,90 @@ export default function Navbar() {
     <>
       <div>
         <header
-          className={`fixed top-0 left-0 w-full z-50 transition-all  ${
-            isScrolled ? "backdrop-blur-lg  shadow-lg" : "bg-white"
-          }`}
+          className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 
+            ${isScrolled 
+              ? "backdrop-blur-md bg-white/70 shadow-lg" 
+              : "bg-white/20 backdrop-blur-sm"}`}
         >
           <div className="container px-4 lg:px-12 max-w-screen-xl mx-auto">
             <div className="flex items-center justify-between relative">
-              {/* Logo */}
+              {/* Logo dengan animasi dan efek hover */}
               <div className="px-4 py-2">
                 <a
                   href="#home"
-                  className="font-bold text-lg text-[#6497B1] block py-2 xl:text-xl 2xl:-translate-x-36 2xl:text-2xl"
+                  className="font-bold text-lg block py-2 xl:text-xl 2xl:text-2xl
+                    bg-gradient-to-r from-[#6497B1] to-blue-500 bg-clip-text text-transparent
+                    hover:scale-105 transition-all duration-300 ease-in-out"
                 >
                   Nas
                 </a>
               </div>
 
-              {/* Hamburger Menu */}
+              {/* Perbaikan posisi hamburger menu */}
               <div className="flex justify-center">
                 <button
-                  onClick={() => {
-                    setIsOpen(!isOpen);
-                  }}
-                  className="block absolute right-4 top-3 lg:hidden "
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="block fixed right-4 lg:hidden 
+                    hover:scale-105 transition-all duration-300 ease-in-out
+                    p-2 rounded-lg hover:bg-gray-100/50
+                    z-[60] top-3"
                 >
                   <div
-                    className={`w-[30px] h-[2px] my-2 block bg-black transition-transform duration-300 origin-top-left ${isOpen ? "rotate-45  " : ""}`}
+                    className={`w-[30px] h-[2px] my-2 block bg-[#6497B1] transition-all duration-300 ease-in-out
+                      ${isOpen ? "rotate-45 translate-y-[10px]" : ""}`}
                   ></div>
                   <div
-                    className={`w-[30px] h-[2px] my-2 block bg-black  transition ease-in-out ${isOpen ? "scale-0" : ""}`}
+                    className={`w-[30px] h-[2px] my-2 block bg-[#6497B1] transition-all duration-300 ease-in-out
+                      ${isOpen ? "opacity-0" : "opacity-100"}`}
                   ></div>
                   <div
-                    className={`w-[30px] h-[2px] my-2 block bg-black transition-transform duration-300 origin-bottom-left ${isOpen ? "-rotate-45  " : ""}`}
+                    className={`w-[30px] h-[2px] my-2 block bg-[#6497B1] transition-all duration-300 ease-in-out
+                      ${isOpen ? "-rotate-45 -translate-y-[10px]" : ""}`}
                   ></div>
                 </button>
 
-                {/* Navigation Menu */}
+                {/* Navigation Menu dengan z-index yang lebih rendah */}
                 <div
-                  className={`drop-shadow-xl absolute border-l-2 lg:border-none border-blue-400 bg-white h-screen lg:h-20 -right-12 transition ease-in-out e  z-10 duration-500 py-6 lg:py-2 lg:bg-transparent shadow-xl max-w-[250px] w-full  rounded-sm  top-16 lg:block lg:static lg:ml-30  lg:max-w-full lg:shadow-none lg:rounded-none lg:pr-0 2xl:translate-x-36
-              ${isOpen ? "  translate-x-[-30px] " : "  lg:opacity-100 lg:translate-x-0 translate-x-60  "} `}
+                  className={`fixed lg:static top-0 right-0 h-screen lg:h-auto
+                    backdrop-blur-xl lg:backdrop-blur-none bg-white/90 lg:bg-transparent
+                    w-[280px] lg:w-auto transition-all duration-500 ease-in-out
+                    p-8 lg:p-0 pt-24 lg:pt-0
+                    shadow-2xl lg:shadow-none
+                    z-[55]
+                    ${isOpen ? "translate-x-0" : "translate-x-full lg:translate-x-0"}
+                    lg:flex lg:items-center`}
                 >
-                  <ul className="   block lg:flex lg:space-x-8 lg:pl-0 text-3xl">
-                    <li className="group">
-                      <a
-                        href="#home"
-                        className="  text-xl text-black py-5 mx-4 flex group-hover:text-blue-400 2xl:text-xl"
-                      >
-                        Beranda
-                      </a>
-                    </li>
-                    <li className="group">
-                      <a
-                        href="#education"
-                        className="text-xl text-black py-5 mx-4 flex group-hover:text-blue-400 2xl:text-xl"
-                      >
-                        Pendidikan
-                      </a>
-                    </li>
-                    <li className="group">
-                      <a
-                        href="#portfolio"
-                        className="text-xl text-black py-5 mx-4 flex group-hover:text-blue-400 2xl:text-xl"
-                      >
-                        Portofolio
-                      </a>
-                    </li>
-                    <li className="group">
-                      <a
-                        href="#skills"
-                        className="text-xl text-black py-5 mx-4 flex group-hover:text-blue-400 2xl:text-xl"
-                      >
-                        Tech Stack
-                      </a>
-                    </li>
-                    <li className="group">
-                      <a
-                        href="#contact"
-                        className="text-xl text-black py-5 mx-4 flex group-hover:text-blue-400 2xl:text-xl"
-                      >
-                        Kontak
-                      </a>
-                    </li>
+                  <ul className=" flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-8">
+                    {[
+                      { href: "#home", text: "Beranda" },
+                      { href: "#education", text: "Pendidikan" },
+                      { href: "#portfolio", text: "Portofolio" },
+                      { href: "#skills", text: "Tech Stack" },
+                      { href: "#contact", text: "Kontak" },
+                    ].map((item) => (
+                      <li key={item.href} className="group">
+                        <a
+                          href={item.href}
+                          className="  text-lg lg:text-xl text-gray-700 
+                            relative overflow-hidden block
+                            hover:text-[#6497B1] t duration-300
+                            py-2 px-4 rounded-lg hover:bg-blue-50/50
+                            group-hover:scale-105 transform transition-all"
+                        >
+                          {item.text}
+                          <span className="absolute bottom-0 left-0 w-full h-0.5 
+                            bg-[#6497B1] transform scale-x-0 group-hover:scale-x-100 
+                            transition-transform duration-300"
+                          />
+                        </a>
+                      </li>
+                    ))}
                   </ul>
-                  <span className="">
+                  
+                  {/* Music Player dengan styling baru */}
+                  <div className="mt-8 lg:mt-0 lg:ml-8">
                     <MusicPlayer />
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>

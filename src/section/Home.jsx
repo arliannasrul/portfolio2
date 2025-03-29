@@ -12,7 +12,7 @@ export default function Home() {
           <div class="container">
             <div class="flex flex-wrap ">
               <div class=" w-full self-center px-4 lg:w-1/2 pt-36 lg:pt-0 pb-6">
-                <div class="  gap-2 text-base grid grid-cols-1 font-semibold md:text-xl">
+                <div class="  gap-2 text-base grid grid-cols-1 font-semibold md:text-xl overflow-hidden">
                   <SplitText
                     text=" Arlian Nasrul Ramadhani"
                     className="text-5xl font-semibold col-span-1  text-slate-800 "
@@ -33,7 +33,7 @@ export default function Home() {
                   <SplitText
                     text="Front-End Web Developer"
                     className="text-4xl font-bold text-[#6497B1] col-span-2 "
-                    delay={80}
+                    delay={90}
                     animationFrom={{
                       opacity: 0,
                       transform: "translate3d(0,50px,0)",
@@ -125,8 +125,8 @@ Download CV
 </AnimatedContent>
                 
               </div>
-              <div class="w-full self-end px-4 lg:w-1/2 relative">
-                <Lanyard position={[0, 0, 17]} gravity={[0, -40, 0]} />
+              <div class="w-full self-end -top-7 lg:w-1/2 relative z-0 ">
+                <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
               </div>
             </div>
           </div>
