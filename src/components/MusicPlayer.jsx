@@ -85,7 +85,7 @@ export default function MusicPlayer() {
           controlsList="nodownload" 
           onContextMenu={(e) => e.preventDefault()}
         />
-        <Music className="text-blue-500" size={20} />
+        <Music className="text-[#6497b1]" size={20} />
         <div className="col-span-2">
           <p className="text-sm font-semibold">
             {songs[currentSongIndex].title}
@@ -102,7 +102,7 @@ export default function MusicPlayer() {
         </button>
         <button
           onClick={togglePlayPause}
-          className="p-1 bg-blue-500 flex justify-center text-white rounded-full"
+          className="p-1 bg-[#6497b1] flex justify-center text-white rounded-full"
         >
           {isPlaying ? <Pause size={20} /> : <Play size={20} />}
         </button>
@@ -114,7 +114,7 @@ export default function MusicPlayer() {
         </button>
         <div className="w-full h-1 bg-gray-200 mt-2 relative col-span-4">
           <div
-            className="h-1 bg-blue-500"
+            className="h-1 bg-[#6497b1]"
             style={{ width: `${(currentTime / duration) * 100}%` }}
           />
         </div>
@@ -125,10 +125,10 @@ export default function MusicPlayer() {
       </div>
 
       {/* Show Playlist Button */}
-      <div className="relative z-20 text-center bg-white  border-blue-500">
+      <div className="relative z-20 text-center bg-white  border-[#6497b1]">
         <button
           onClick={() => setShowPlaylist(!showPlaylist)}
-          className="w-1/2 px-4 py-2 text-sm border-b-1  rounded-b-2xl border-x-1  border-[#6497b1] text-gray-600 hover:text-blue-500 
+          className="w-1/2 px-4 py-2 text-sm border-b-1  rounded-b-2xl border-x-1  border-[#6497b1] text-gray-600 hover:text-[#6497b1]
             transition-colors hover:bg-gray-50 active:scale-95 transform duration-150"
         >
           {showPlaylist ? "Hide Playlist" : "Show Playlist"}
@@ -154,7 +154,7 @@ export default function MusicPlayer() {
               className={`w-full flex items-center p-3 rounded-lg 
                 transform transition-all duration-200 hover:scale-[0.99]
                 ${currentSongIndex === index 
-                  ? "bg-blue-50 text-blue-500" 
+                  ? "bg-blue-50 text-[#6497b1]" 
                   : "hover:bg-gray-50"}`}
             >
               <div className="flex-1 text-left">
@@ -162,7 +162,7 @@ export default function MusicPlayer() {
                 <p className="text-sm text-gray-500">{song.artist}</p>
               </div>
               {currentSongIndex === index && isPlaying && (
-                <div className="w-4 h-4 rounded-full bg-blue-500 flex items-center justify-center">
+                <div className="w-4 h-4 rounded-full bg-[#6497b1] flex items-center justify-center">
                   <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
                 </div>
               )}

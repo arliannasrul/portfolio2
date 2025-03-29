@@ -34,7 +34,7 @@ export default function Navbar() {
                 <a
                   href="#home"
                   className="font-bold text-lg block py-2 xl:text-xl 2xl:text-2xl
-                    bg-gradient-to-r from-[#6497B1] to-blue-500 bg-clip-text text-transparent
+                     text-[#6497B1]  bg-clip-text 
                     hover:scale-105 transition-all duration-300 ease-in-out"
                 >
                   Nas
