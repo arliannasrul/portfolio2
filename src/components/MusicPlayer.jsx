@@ -15,29 +15,41 @@ export default function MusicPlayer() {
     const audio = audioRef.current;
     
     try {
-      // Gunakan blob URL untuk mencegah download
+      // Tambahkan error handling untuk fetch
       fetch(songs[currentSongIndex].src)
-        .then(response => response.blob())
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.blob();
+        })
         .then(blob => {
           const blobUrl = URL.createObjectURL(blob);
           audio.src = blobUrl;
           audio.type = "audio/mpeg";
           
-          if (isPlaying) {
-            audio.play().catch((err) => console.log("Autoplay gagal:", err));
-          }
+          // Tambahkan error handling untuk playback
+          const playPromise = isPlaying ? audio.play() : Promise.resolve();
+          playPromise.catch((err) => {
+            console.error("Playback error:", err);
+            setIsPlaying(false);
+          });
         })
-        .catch(err => console.error("Error loading audio:", err));
+        .catch(err => {
+          console.error("Error loading audio:", err);
+          // Tambahkan feedback visual untuk error
+          alert(`Gagal memuat lagu: ${songs[currentSongIndex].title}`);
+        });
 
       return () => {
-        if (audio.src) {
+        if (audio.src && audio.src.startsWith('blob:')) {
           URL.revokeObjectURL(audio.src);
         }
       };
     } catch (err) {
       console.error("Error setting up audio:", err);
     }
-  }, [currentSongIndex]);
+  }, [currentSongIndex, isPlaying]);
 
   useEffect(() => {
     if (!audioRef.current) return;
@@ -94,7 +106,7 @@ export default function MusicPlayer() {
   };
 
   return (
-    <div className="fixed bottom-26 left-0 right-0 lg:translate-y-[95vh] lg:hidden lg:w-96">
+    <div className=" fixed bottom-[5vh] left-0 right-0 lg:translate-y-[95vh] lg:hidden ">
       {/* Player Controls */}
       <div className="relative z-20 grid items-center grid-cols-6 gap-2 lg:bg-slate-200 lg:rounded-t-2xl bg-white p-2 min-h-10 pr-4 border-y-1 lg:border-1 border-[#6497b1]">
         <audio 

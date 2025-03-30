@@ -67,7 +67,7 @@ export default function Navbar() {
                 {/* Navigation Menu dengan z-index yang lebih rendah */}
                 <div
                   className={`fixed lg:static top-0 right-0 h-screen lg:h-auto
-                    backdrop-blur-xl lg:backdrop-blur-none bg-white/90 lg:bg-transparent
+                    backdrop-blur-xl lg:backdrop-blur-none bg-white lg:bg-transparent
                     w-[280px] lg:w-auto transition-all duration-500 ease-in-out
                     p-8 lg:p-0 pt-24 lg:pt-0
                     shadow-2xl lg:shadow-none
