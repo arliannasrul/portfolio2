@@ -108,7 +108,7 @@ export default function MusicPlayer() {
   return (
     <div className=" fixed bottom-[5vh] left-0 right-0 lg:translate-y-[95vh] lg:hidden ">
       {/* Player Controls */}
-      <div className="relative z-20 grid items-center grid-cols-6 gap-2 lg:bg-slate-200 lg:rounded-t-2xl bg-white p-2 min-h-10 pr-4 border-y-1 lg:border-1 border-[#6497b1]">
+      <div className=" min-h-26 relative z-20 grid items-center grid-cols-6 gap-2 lg:bg-slate-200 lg:rounded-t-2xl bg-white p-2  pr-4 border-y-1 lg:border-1 border-[#6497b1]">
         <audio 
           ref={audioRef} 
           preload="none"
