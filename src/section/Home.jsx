@@ -3,7 +3,8 @@ import SplitText from "../components/SplitText/SplitText.jsx";
 import RotatingText from "../components/RotatingText/RotatingText.jsx";
 import StarBorder from "../Animation/StarBorder/StarBorder.jsx";
 import AnimatedContent from "../Animation/AnimatedContent/AnimatedContent.jsx";
-
+import ScrollReveal from "../components/ScrollReveal/ScrollReveal.jsx";
+import BlurText from "../components/BlurText/BlurText.jsx";
 export default function Home() {
   return (
     <>
@@ -136,22 +137,23 @@ Download CV
           <div class="container">
             <div class="flex flex-wrap">
               <div class="w-full px-4 mb-10 lg:w-1/2">
-                <h4 class="font-bold uppercase text-blue-400 text-lg mb-3 lg:text-2xl">
+                <h4 class="font-bold uppercase text-[#6497B1] text-lg mb-3 lg:text-2xl">
                   Tentang saya
                 </h4>
 
-                <p class="font-medium text-base text-slate-500 max-w-2xl lg:text-lg sm:border-r-0">
-                  Halo perkenalkan aku <strong>Nasrul</strong>, seorang
-                  mahasiswa aktif semester 4 di perguruan tinggi swasta di
-                  Malang. Di kampus ini aku mengambil program studi S1 Sistem
-                  Infomasi. Selain mengoding, aku juga hobi bermain game,
-                  mendengarkan musik dan menjelajahi alam. aku memilih program
-                  studi Sistem Informasi ini dikarenakan aku suka dengan hal-hal
-                  yang berbau dengan teknologi dan aku yakin jurusan IT atau
-                  teknologi sangat dibutuhkan di masa depan.
-                </p>
+                <BlurText
+  text="Halo perkenalkan aku Nasrul, seorang mahasiswa aktif semester 4 di perguruan tinggi swasta di Malang. Di kampus ini aku mengambil program studi S1 Sistem Infomasi. Selain mengoding, aku juga hobi bermain game, mendengarkan musik dan menjelajahi alam. aku memilih program studi Sistem Informasi ini dikarenakan aku suka dengan hal-hal yang berbau dengan teknologi dan aku yakin jurusan IT atau teknologi sangat dibutuhkan di masa depan."
+  delay={120}
+  animateBy="words"
+  direction="top"
+  
+  className="text-xl mb-8"
+/>
+              
+
+
               </div>
-              <div class="w-full px-4 mb-10 lg:w-1/2 lg:border-l-5 border-blue-400">
+              <div class="w-full px-4 mb-10 lg:w-1/2 lg:border-l-5 border-[#6497B1]">
                 <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-12">
                   Ayo berteman!
                 </h3>

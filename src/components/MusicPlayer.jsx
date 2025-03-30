@@ -108,7 +108,7 @@ export default function MusicPlayer() {
   return (
     <div className=" fixed bottom-[5vh] left-0 right-0 lg:translate-y-[95vh] lg:hidden ">
       {/* Player Controls */}
-      <div className=" min-h-26 relative z-20 grid items-center grid-cols-6 gap-2 lg:bg-slate-200 lg:rounded-t-2xl bg-white p-2  pr-4 border-y-1 lg:border-1 border-[#6497b1]">
+      <div className=" min-h-24 max-h-24 relative z-20 grid items-center grid-cols-6 gap-2 lg:bg-slate-200 lg:rounded-t-2xl bg-white p-2  pr-4 border-y-1 lg:border-1 border-[#6497b1]">
         <audio 
           ref={audioRef} 
           preload="none"
@@ -128,7 +128,7 @@ export default function MusicPlayer() {
         </div>
         <button
           onClick={prevSong}
-          className="text-gray-500 hover:text-blue-500"
+          className="text-gray-500 flex justify-center hover:text-blue-500"
         >
           <SkipBack size={20} />
         </button>
@@ -140,7 +140,7 @@ export default function MusicPlayer() {
         </button>
         <button
           onClick={nextSong}
-          className="text-gray-500 hover:text-blue-500"
+          className="text-gray-500 flex justify-center hover:text-blue-500"
         >
           <SkipForward size={20} />
         </button>
@@ -160,7 +160,7 @@ export default function MusicPlayer() {
       <div className="relative z-20 text-center bg-white  border-[#6497b1]">
         <button
           onClick={() => setShowPlaylist(!showPlaylist)}
-          className="w-1/2 px-4 py-2 text-sm border-b-1  rounded-b-2xl border-x-1  border-[#6497b1] text-gray-600 hover:text-[#6497b1]
+          className="w-3/4 px-4 py-2 text-sm border-b-1  rounded-b-2xl border-x-1  border-[#6497b1] text-gray-600 hover:text-[#6497b1]
             transition-colors hover:bg-gray-50 active:scale-95 transform duration-150"
         >
           {showPlaylist ? "Hide Playlist" : "Show Playlist"}
@@ -170,9 +170,9 @@ export default function MusicPlayer() {
       {/* Playlist Panel dengan Transisi */}
       <div 
         className={`relative z-10 bg-white border-b-1 border-[#6497b1] 
-          shadow-lg overflow-hidden transition-all duration-300 ease-in-out
+          shadow-lg overflow-y-scroll transition-all duration-300 ease-in-out
           ${showPlaylist 
-            ? "max-h-[50vh] opacity-100" 
+            ? "max-h-[25vh] opacity-100" 
             : "max-h-0 opacity-0"}`}
       >
         <div className={`p-4 space-y-2 transition-all duration-300

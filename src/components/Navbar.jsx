@@ -45,22 +45,22 @@ export default function Navbar() {
               <div className="flex justify-center">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
-                  className="block fixed right-4 lg:hidden 
+                  className=" top-0 px-4 py-2 block fixed right-4 lg:hidden 
                     hover:scale-105 transition-all duration-300 ease-in-out
-                    p-2 rounded-lg hover:bg-gray-100/50
-                    z-[60] top-3"
+                     rounded-lg hover:bg-gray-100/50
+                    z-[60] "
                 >
                   <div
-                    className={`w-[30px] h-[2px] my-2 block bg-[#6497B1] transition-all duration-300 ease-in-out
-                      ${isOpen ? "rotate-45 translate-y-[10px]" : ""}`}
+                    className={`w-[30px] h-[2px] my-2 block bg-[#6497B1] transition-all duration-300 ease-in-out origin-top-left
+                      ${isOpen ? "rotate-45 " : ""}`}
                   ></div>
                   <div
                     className={`w-[30px] h-[2px] my-2 block bg-[#6497B1] transition-all duration-300 ease-in-out
                       ${isOpen ? "opacity-0" : "opacity-100"}`}
                   ></div>
                   <div
-                    className={`w-[30px] h-[2px] my-2 block bg-[#6497B1] transition-all duration-300 ease-in-out
-                      ${isOpen ? "-rotate-45 -translate-y-[10px]" : ""}`}
+                    className={`w-[30px] h-[2px] my-2 block bg-[#6497B1] transition-all duration-300 ease-in-out origin-bottom-left
+                      ${isOpen ? "-rotate-45 " : ""}`}
                   ></div>
                 </button>
 
@@ -69,13 +69,13 @@ export default function Navbar() {
                   className={`fixed lg:static top-0 right-0 h-screen lg:h-auto
                     backdrop-blur-xl lg:backdrop-blur-none bg-white lg:bg-transparent
                     w-[60vw] lg:w-auto transition-all duration-500 ease-in-out
-                    p-8 lg:p-0 pt-24 lg:pt-0
+                    p-4 lg:p-0 pt-14 lg:pt-0
                     shadow-2xl drop-shadow-xl lg:shadow-none
                     z-[55]
                     ${isOpen ? "translate-x-0" : "translate-x-full lg:translate-x-0"}
                     lg:flex lg:items-center`}
                 >
-                  <ul className=" flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-8">
+                  <ul className=" flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:space-x-8 ">
                     {[
                       { href: "#home", text: "Beranda" },
                       { href: "#education", text: "Pendidikan" },
