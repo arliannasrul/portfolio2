@@ -27,12 +27,13 @@ extend({ MeshLineGeometry, MeshLineMaterial });
 
 export default function Lanyard({
   position = [0, 0, 20],
-  gravity = [0, -40, 0],
+  gravity = [0, -120, 0],
   fov = 15,
   transparent = true,
 }) {
   const [isSmall, setIsSmall] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [lastTapTime, setLastTapTime] = useState(0);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -44,20 +45,29 @@ export default function Lanyard({
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  const handleDoubleTap = () => {
+    const currentTime = new Date().getTime();
+    const tapLength = currentTime - lastTapTime;
+    
+    if (tapLength < 300 && tapLength > 0) {
+      setIsFlipped(!isFlipped);
+    }
+    setLastTapTime(currentTime);
+  };
+
   return (
-    <div className="relative h-screen w-full flex justify-center items-center transform scale-100 origin-top">
+    <div 
+      className="relative h-screen w-full flex justify-center items-center transform scale-100 origin-top"
+      onClick={isSmall ? handleDoubleTap : undefined}
+    >
       {isSmall && (
-        <button
-          onClick={() => setIsFlipped(!isFlipped)}
-          className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50
-            bg-black/30 backdrop-blur-sm px-6 py-2 rounded-full 
-            text-white text-sm font-medium
-            border border-white/20 
-            active:scale-95 transition-all
-            hover:bg-black/40"
-        >
-          Flip Card
-        </button>
+        
+        <div className="z-0 fixed bottom-14 left-1/2 transform -translate-x-1/2 
+        px-6 py-2 
+      text-[#6497b179] text-sm font-medium
+    ">
+      DOUBLE TAP CARD
+    </div>
       )}
 
       <Canvas
