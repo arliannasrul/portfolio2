@@ -160,7 +160,7 @@ const RotatingText = forwardRef((props, ref) => {
   return (
     <motion.span
       className={cn(
-        "flex flex-wrap whitespace-pre-wrap relative",
+        "flex flex-wrap whitespace-pre-wrap relative ",
         mainClassName,
       )}
       {...rest}
@@ -177,8 +177,8 @@ const RotatingText = forwardRef((props, ref) => {
           key={currentTextIndex}
           className={cn(
             splitBy === "lines"
-              ? "flex flex-col w-full"
-              : "flex flex-wrap whitespace-pre-wrap relative",
+              ? "flex flex-col w-full "
+              : "flex flex-wrap whitespace-pre-wrap relative ",
           )}
           layout
           aria-hidden="true"

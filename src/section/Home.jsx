@@ -49,7 +49,7 @@ export default function Home() {
                     threshold={0.2}
                     rootMargin="-50px"
                   />
-                 <div className="flex items-center justify-center gap-2">
+                 <div className="flex items-center justify-center gap-2 transition-all duration-500">
                  <AnimatedContent
   distance={150}
   direction="horizontal"
@@ -61,7 +61,7 @@ export default function Home() {
   threshold={0.2}
 >
 
-                 <h1 className="text-2xl text-slate-600"> Saya Adalah</h1>
+                 <h1 className="text-2xl text-slate-600"> I'm a</h1>
                  </AnimatedContent>
                  <AnimatedContent
   distance={150}
@@ -77,22 +77,23 @@ export default function Home() {
                    
                     <RotatingText
                       texts={[
-                        "Web Developer",
+                        "Web Development",
                         "IT Enthusiast",
-                        "Pro Gamer",
-                        "Manusia Biasa",
+                        "Gamer",
+                        "Ordinary Person",
                       ]}
-                      mainClassName=" min-w-[210px] max-w-[200px] px-2 sm:px-2 md:px-3 bg-[#6497b1] text-white overflow-hidden  sm:py-1 justify-center rounded-lg text-2xl text-bold inline-flex transition-all"
+                      mainClassName="px-2 bg-[#6497b1] text-white overflow-hidden py-1 justify-center rounded-lg text-2xl text-bold inline-flex transition-all"
                       staggerFrom={"last"}
-                      initial={{ y: "100%" }}
-                      animate={{ y: 0 }}
-                      exit={{ y: "-120%" }}
+                      initial={{ y: "100%", opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: "-120%", opacity: 0 }}
                       staggerDuration={0.025}
                       splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
                       transition={{
                         type: "spring",
                         damping: 30,
                         stiffness: 400,
+                        duration: 0.5
                       }}
                       rotationInterval={2000}
                     />
@@ -140,7 +141,7 @@ export default function Home() {
               <div className="w-full px-4 mb-10 lg:w-[70%]">
                 <div className="pb-2">
                 <SplitText
-  text="TENTANG SAYA"
+  text="ABOUT ME"
   className="text-2xl text-[#6497B1] font-semibold text-center "
   delay={90}
   animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}

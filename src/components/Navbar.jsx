@@ -77,11 +77,12 @@ export default function Navbar() {
                 >
                   <ul className=" flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:space-x-8 ">
                     {[
-                      { href: "#home", text: "Beranda" },
-                      { href: "#education", text: "Pendidikan" },
-                      { href: "#portfolio", text: "Portofolio" },
-                      { href: "#skills", text: "Tech Stack" },
-                      { href: "#contact", text: "Kontak" },
+                      { href: "#home", text: "Home" },
+                      { href: "#education", text: "Sertification" },
+                      { href: "#portfolio", text: "Tech Stack" },
+                      { href: "#skills", text: "Experience" },
+                      { href: "#contact", text: "Portfolio" },
+                      { href: "#contact", text: "Contact" },
                     ].map((item) => (
                       <li key={item.href} className="group">
                         <a
@@ -106,7 +107,7 @@ export default function Navbar() {
                   <div className="mt-8 lg:mt-0 lg:ml-8">
                     <MusicPlayer />
                   </div>
-                </div>
+                </div>  
               </div>
             </div>
           </div>
