@@ -11,14 +11,15 @@ export default function Home() {
   return (
     <>
       <div className="">
-        <section id="home" class=" flex justify-center xl:pl-10">
-          <div class="container">
-            <div class="flex flex-wrap ">
-              <div class=" w-full self-center px-4 lg:w-1/2 pt-36 lg:pt-0 pb-6">
-                <div class="  gap-2 text-base grid grid-cols-1 font-semibold md:text-xl overflow-hidden">
+        <section id="home" className=" flex justify-center ">
+          <div className="container">
+            <div className="flex flex-wrap ">
+              <div className=" w-full self-center px-4 lg:w-1/2 pt-36 lg:pt-0 pb-6">
+                <div class="  text-base   gap-2 font-semibold md:text-xl">
+                  <div className=" -mb-7 pb-2">
                   <SplitText
-                    text=" Arlian Nasrul Ramadhani"
-                    className="text-5xl font-semibold col-span-1  text-slate-800 "
+                    text="Arlian Nasrul Ramadhani"
+                    className=" text-3xl lg:text-5xl font-semibold   text-slate-800 "
                     delay={50}
                     animationFrom={{
                       opacity: 0,
@@ -32,10 +33,12 @@ export default function Home() {
                     threshold={0.2}
                     rootMargin="-50px"
                   />
-                  
+                  </div>
+                  <br></br>
+                  <div className="pb-2 ">
                   <SplitText
                     text="Front-End Web Developer"
-                    className="text-4xl font-bold text-[#6497B1] col-span-2 "
+                    className="text-2xl lg:text-4xl font-bold text-[#6497B1]  "
                     delay={90}
                     animationFrom={{
                       opacity: 0,
@@ -49,9 +52,11 @@ export default function Home() {
                     threshold={0.2}
                     rootMargin="-50px"
                   />
-                 <div className="flex items-center justify-center gap-2 transition-all duration-500">
+                  </div>
+                 <div className="flex  gap-2  ">
+               
                  <AnimatedContent
-  distance={150}
+  distance={false}
   direction="horizontal"
   reverse={true}
   config={{ tension: 30, friction: 10 }}
@@ -61,8 +66,9 @@ export default function Home() {
   threshold={0.2}
 >
 
-                 <h1 className="text-2xl text-slate-600"> I'm a</h1>
+                 <h1 className=" text-lg lg:text-xl text-slate-600 transition-all"> I'm a</h1>
                  </AnimatedContent>
+                 
                  <AnimatedContent
   distance={150}
   direction="horizontal"
@@ -82,21 +88,23 @@ export default function Home() {
                         "Gamer",
                         "Ordinary Person",
                       ]}
-                      mainClassName="px-2 bg-[#6497b1] text-white overflow-hidden py-1 justify-center rounded-lg text-2xl text-bold inline-flex transition-all"
+                      mainClassName=" min-w-[205px] max-w-[205px]  text-slate-500 overflow-hidden  flex text-center justify-center rounded-lg text-lg lg:text-xl text-bold inline-block transition-all"
                       staggerFrom={"last"}
                       initial={{ y: "100%", opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: "-120%", opacity: 0 }}
                       staggerDuration={0.025}
-                      splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                      splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1 "
                       transition={{
                         type: "spring",
                         damping: 30,
                         stiffness: 400,
                         duration: 0.5
                       }}
+                      elementLevelClassName=""
                       rotationInterval={2000}
                     />
+                    
                   
 </AnimatedContent>
                   
@@ -116,17 +124,18 @@ export default function Home() {
   scale={1.1}
   threshold={0.2}
 >
-<a  className="flex justify-center mt-10 lg:mt-20 ">
+<a  className="flex mt-10 lg:mt-6 " href="https://docs.google.com/document/d/12aV7gNu7xec1ggA0ST0ZuRgXP4l-YyqYmqT4q6fcEIM/export?format=pdf">
 
 
 <Magnet padding={50} disabled={false} magnetStrength={2}>
-  <a className="bg-[#6497B1] p-2 rounded-xl text-white font-semibold" href="https://docs.google.com/document/d/12aV7gNu7xec1ggA0ST0ZuRgXP4l-YyqYmqT4q6fcEIM/export?format=pdf">Download CV</a>
+  <button className="active:scale-80 transition-all"><h3 className="bg-[#6497B1]  p-2 rounded-xl text-white font-semibold" >Download CV</h3>
+  </button>
 </Magnet>
 </a>
 </AnimatedContent>
                 
               </div>
-              <div class="w-full self-end -top-6 lg:w-1/2 relative z-0 ">
+              <div class="w-full self-end -top-6 lg:w-1/2 relative z-0">
                 <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
               </div>
             </div>
@@ -135,10 +144,10 @@ export default function Home() {
 
 
 
-        <section id="about" className="pb-20 flex xl:px-16">
+        <section id="about" className="pb-20 flex lg:px-4">
           <div className="container mx-auto ">
             <div className="flex flex-wrap justify-between items-center ">
-              <div className="w-full px-4 mb-10 lg:w-[70%]">
+              <div className="w-full px-4 mb-10 lg:w-[75%]">
                 <div className="pb-2">
                 <SplitText
   text="ABOUT ME"
@@ -161,7 +170,7 @@ export default function Home() {
                 />
               </div>
           
-              <div className="w-full px-4 mb-12 lg:w-[30%]  ">  
+              <div className="w-full px-4 mb-12 lg:w-[25%]  ">  
               
               <SplitText
   text="Get In Touch!"
@@ -185,11 +194,12 @@ export default function Home() {
   threshold={0.2}
 >
 
-   
+
 <div className="lg:pl-6 lg:border-l-2 border-[#6497B1]">
                   <p className="font-medium text-base pt-5 pb-6 max-w-xl">
                     Mari berteman denganku.
                   </p>
+                  
                   <div className="flex items-center">
                     <a
                       href="https://www.instagram.com/arliannasrul/ "
@@ -209,7 +219,9 @@ export default function Home() {
                         ></path>
                       </svg>
                     </a>
-
+                   
+  
+ 
                     <a
                       href="https://www.tiktok.com/@arliannasrul "
                       target="_blank"

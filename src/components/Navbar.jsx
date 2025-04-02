@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import MusicPlayer from "../components/MusicPlayer";
-
+import RotatingText from "./RotatingText/RotatingText";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -78,10 +78,10 @@ export default function Navbar() {
                   <ul className=" flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:space-x-8 ">
                     {[
                       { href: "#home", text: "Home" },
-                      { href: "#education", text: "Sertification" },
-                      { href: "#portfolio", text: "Tech Stack" },
-                      { href: "#skills", text: "Experience" },
-                      { href: "#contact", text: "Portfolio" },
+                      { href: "#sertification", text: "Sertification" },
+                      { href: "#techStack", text: "Tech Stack" },
+                      { href: "#experience", text: "Experience" },
+                      { href: "#portfolio", text: "Portfolio" },
                       { href: "#contact", text: "Contact" },
                     ].map((item) => (
                       <li key={item.href} className="group">
@@ -99,6 +99,7 @@ export default function Navbar() {
                             transition-transform duration-300"
                           />
                         </a>
+
                       </li>
                     ))}
                   </ul>
