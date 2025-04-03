@@ -21,6 +21,15 @@ export default function Navbar() {
   return (
     <>
       <div>
+        {/* Overlay gelap saat navbar dibuka pointer-events-none = mencegah interaksi dengan elemen lain */}
+          <div 
+            className={`fixed z-40 lg:hidden inset-0 transition-all bg-black/60 duration-300 ease-in ${
+              isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+            }`}
+            onClick={() => setIsOpen(false)}
+          />
+  
+        
         <header
           className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 
             ${isScrolled 
@@ -33,8 +42,8 @@ export default function Navbar() {
               <div className="px-4 py-2">
                 <a
                   href="#home"
-                  className="font-bold text-lg block py-2 xl:text-xl 2xl:text-2xl
-                     text-[#6497B1]  bg-clip-text 
+                  className="font-bold text-lg block py-2 xl:text-xl 2xl:text-2xl 
+                     text-[#6497B1]   
                     hover:scale-105 transition-all duration-300 ease-in-out"
                 >
                   Nas
@@ -64,17 +73,20 @@ export default function Navbar() {
                   ></div>
                 </button>
 
+
+              <div>
                 {/* Navigation Menu dengan z-index yang lebih rendah */}
                 <div
                   className={`fixed lg:static top-0 right-0 h-screen lg:h-auto
                     backdrop-blur-xl lg:backdrop-blur-none bg-white lg:bg-transparent
-                    w-[60vw] lg:w-auto transition-all duration-500 ease-in-out
+                  lg:w-auto transition-all duration-500 ease-in-out w-[40vw] min-w-[270px]
                     p-4 lg:p-0 pt-14 lg:pt-0
                     shadow-2xl drop-shadow-xl lg:shadow-none
-                    z-[55]
+                    z-55
                     ${isOpen ? "translate-x-0" : "translate-x-full lg:translate-x-0"}
                     lg:flex lg:items-center`}
                 >
+                 
                   <ul className=" flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:space-x-8 ">
                     {[
                       { href: "#home", text: "Home" },
@@ -109,6 +121,7 @@ export default function Navbar() {
                     <MusicPlayer />
                   </div>
                 </div>  
+                </div>
               </div>
             </div>
           </div>
