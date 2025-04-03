@@ -135,7 +135,7 @@ export default function Home() {
 </AnimatedContent>
                 
               </div>
-              <div class="w-full h-[20%] lg:h-full self-end -top-6 lg:w-1/2 relative z-0 ">
+              <div class="w-full h-[95vh] lg:h-full self-end -top-6 lg:w-1/2 relative z-0 ">
                 <Lanyard position={[0, 0, 23]} gravity={[0, -40, 0]} />
               </div>
             </div>
@@ -144,14 +144,14 @@ export default function Home() {
 
 
 
-        <section id="about" className="pb-20 flex lg:px-4">
-          <div className="container  ">
+        <section id="about" className="pb-20 flex lg:px-4 ">
+          <div className="  ">
             <div className="flex flex-wrap justify-between items-center px-6 ">
-              <div className="w-full  mb-10 lg:w-[75%]">
+              <div className="w-full  mb-10 lg:w-[75%] ">
                 <div className="pb-2 ">
                 <SplitText
   text="ABOUT ME"
-  className="text-2xl text-[#6497B1] font-semibold text-center "
+  className="text-2xl text-[#6497B1] font-semibold text-center  "
   delay={90}
   animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
   animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
@@ -170,11 +170,10 @@ export default function Home() {
                 />
               </div>
           
-              <div className="w-full  mb-12 lg:w-[25%]  ">  
-              
+              <div className="w-full  mb-12 lg:w-[25%]  ">
               <SplitText
   text="Get In Touch!"
-  className="text-2xl text-[#6497B1] lg:px-7 font-semibold text-center "
+  className="text-2xl text-[#6497B1] lg:px-7  font-semibold text-center "
   delay={90}
   animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
   animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
@@ -195,7 +194,7 @@ export default function Home() {
 >
 
 
-<div className="lg:pl-6 lg:border-l-2 border-[#6497B1]">
+<div className="lg:pl-6  lg:border-l-2 border-[#6497B1]">
                   <p className="font-poppins  pt-5 pb-6 max-w-xl">
                     Mari berteman denganku.
                   </p>
