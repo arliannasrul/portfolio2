@@ -70,7 +70,7 @@ export default function Home() {
                  </AnimatedContent>
                  
                  <AnimatedContent
-  distance={150}
+  distance={110}
   direction="horizontal"
   reverse={false}
   config={{ tension: 30, friction: 10 }}
@@ -83,7 +83,7 @@ export default function Home() {
                    
                     <RotatingText
                       texts={[
-                        "Web Development",
+                        "Web Developer",
                         "IT Enthusiast",
                         "Gamer",
                         "Ordinary Person",
@@ -184,8 +184,8 @@ export default function Home() {
  
 />
 <AnimatedContent
-  distance={100}
-  direction="horizontal"
+  distance={150}
+  direction="vertical"
   reverse={false}
   config={{ tension: 80, friction: 20 }}
   initialOpacity={0.2}
