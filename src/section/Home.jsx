@@ -14,7 +14,7 @@ export default function Home() {
         <section id="home" className=" flex justify-center ">
           <div className="container">
             <div className="flex flex-wrap ">
-              <div className=" w-full self-center px-4 lg:w-1/2 pt-36 lg:pt-0 pb-6">
+              <div className=" w-full self-center px-4 lg:w-1/2 pt-26 lg:pt-0 pb-6">
                 <div class="  text-base   gap-2 font-semibold md:text-xl">
                   <div className=" -mb-7 pb-2">
                   <SplitText
@@ -56,9 +56,9 @@ export default function Home() {
                  <div className="flex  gap-2  ">
                
                  <AnimatedContent
-  distance={false}
-  direction="horizontal"
-  reverse={true}
+  distance={120}
+  direction="vertical"
+  reverse={false}
   config={{ tension: 30, friction: 10 }}
   initialOpacity={0.2}
   animateOpacity
@@ -124,19 +124,19 @@ export default function Home() {
   scale={1.1}
   threshold={0.2}
 >
-<a  className="flex mt-10 lg:mt-6 " href="https://docs.google.com/document/d/12aV7gNu7xec1ggA0ST0ZuRgXP4l-YyqYmqT4q6fcEIM/export?format=pdf">
+<a  className="flex mt-4 lg:mt-6 " href="https://docs.google.com/document/d/12aV7gNu7xec1ggA0ST0ZuRgXP4l-YyqYmqT4q6fcEIM/export?format=pdf">
 
 
 <Magnet padding={50} disabled={false} magnetStrength={2}>
-  <button className="active:scale-80 transition-all"><h3 className="bg-[#6497B1]  p-2 rounded-xl text-white font-semibold" >Download CV</h3>
+  <button className="active:scale-80 transition-all"><h3 className="bg-[#6497B1]  p-3 rounded-3xl text-white font-semibold" >Download CV</h3>
   </button>
 </Magnet>
 </a>
 </AnimatedContent>
                 
               </div>
-              <div class="w-full self-end -top-6 lg:w-1/2 relative z-0">
-                <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+              <div class="w-full h-[20%] lg:h-full self-end -top-6 lg:w-1/2 relative z-0 ">
+                <Lanyard position={[0, 0, 23]} gravity={[0, -40, 0]} />
               </div>
             </div>
           </div>
@@ -145,10 +145,10 @@ export default function Home() {
 
 
         <section id="about" className="pb-20 flex lg:px-4">
-          <div className="container mx-auto ">
-            <div className="flex flex-wrap justify-between items-center ">
-              <div className="w-full px-4 mb-10 lg:w-[75%]">
-                <div className="pb-2">
+          <div className="container  ">
+            <div className="flex flex-wrap justify-between items-center px-6 ">
+              <div className="w-full  mb-10 lg:w-[75%]">
+                <div className="pb-2 ">
                 <SplitText
   text="ABOUT ME"
   className="text-2xl text-[#6497B1] font-semibold text-center "
@@ -166,15 +166,15 @@ export default function Home() {
                   delay={100}
                   animateBy="words"
                   direction="top"
-                  className="text-xl mb-8 "
+                  className="text-lg mb-8  "
                 />
               </div>
           
-              <div className="w-full px-4 mb-12 lg:w-[25%]  ">  
+              <div className="w-full  mb-12 lg:w-[25%]  ">  
               
               <SplitText
   text="Get In Touch!"
-  className="text-2xl text-[#6497B1] px-7 font-semibold text-center "
+  className="text-2xl text-[#6497B1] lg:px-7 font-semibold text-center "
   delay={90}
   animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
   animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
@@ -196,7 +196,7 @@ export default function Home() {
 
 
 <div className="lg:pl-6 lg:border-l-2 border-[#6497B1]">
-                  <p className="font-medium text-base pt-5 pb-6 max-w-xl">
+                  <p className="font-poppins  pt-5 pb-6 max-w-xl">
                     Mari berteman denganku.
                   </p>
                   

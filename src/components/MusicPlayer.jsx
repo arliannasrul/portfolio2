@@ -106,7 +106,7 @@ export default function MusicPlayer() {
   };
 
   return (
-    <div className=" fixed bottom-[5vh] left-0 right-0 lg:translate-y-[95vh] lg:hidden ">
+    <div className=" fixed bottom-[6vh] left-0 right-0 lg:translate-y-[95vh] lg:hidden ">
       {/* Player Controls */}
       <div className=" min-h-24 max-h-24 relative z-20 grid items-center grid-cols-6 gap-2 lg:bg-slate-200 lg:rounded-t-2xl bg-white p-2  pr-4 border-y-1 lg:border-1 border-[#6497b1]">
         <audio 
@@ -170,7 +170,7 @@ export default function MusicPlayer() {
       {/* Playlist Panel dengan Transisi */}
       <div 
         className={`relative z-10 bg-white border-b-1 border-[#6497b1] 
-          shadow-lg overflow-y-scroll transition-all duration-300 ease-in-out
+          overflow-y-scroll transition-all duration-300 ease-in-out
           ${showPlaylist 
             ? "max-h-[25vh] opacity-100" 
             : "max-h-0 opacity-0"}`}

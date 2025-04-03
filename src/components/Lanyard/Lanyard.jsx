@@ -62,11 +62,11 @@ export default function Lanyard({
     >
       {isSmall && (
         
-        <div className="z-0 fixed bottom-14 left-1/2 transform -translate-x-1/2 
+        <div className="z-0 fixed bottom-28 left-1/2 transform -translate-x-1/2 
         px-6 py-2 
       text-[#6497b179] text-sm font-medium
     ">
-      DOUBLE TAP CARD
+      DOUBLE TAP TO FLIP 
     </div>
       )}
 

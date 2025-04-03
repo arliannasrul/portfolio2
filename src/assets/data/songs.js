@@ -6,7 +6,7 @@ const songs = [
   },
 
   {
-    title: "Wilflower",
+    title: "Wildflower",
     artist: "Yung-kai",
     src: "/music/WildFlower.mp3",
   },
@@ -20,6 +20,23 @@ const songs = [
     artist: "Niki",
     src: "/music/YoullBeInMyHeart.mp3",
   },
+  {
+    title: "Bad",
+    artist: "Wave to Earth",
+    src: "/music/Bad.mp3",
+  },
+  {
+    title: "Seasons",
+    artist: "Wave to Earth",
+    src: "/music/Seasons.mp3",
+  },
+  {
+    title: "Nina",
+    artist: ".Feast",
+    src: "/music/Nina.mp3",
+  },
+ 
 ];
+
 
 export default songs;

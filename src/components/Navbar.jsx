@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import MusicPlayer from "../components/MusicPlayer";
-import RotatingText from "./RotatingText/RotatingText";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
