@@ -150,7 +150,7 @@ export default function Home() {
               <div className="w-full  mb-10 lg:w-[75%] ">
                 <div className="pb-2 ">
                 <SplitText
-  text="ABOUT ME"
+  text="About Gw"
   className="text-2xl text-[#6497B1] font-semibold text-center  "
   delay={90}
   animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
@@ -172,7 +172,7 @@ export default function Home() {
           
               <div className="w-full  mb-12 lg:w-[25%]  ">
               <SplitText
-  text="Get In Touch!"
+  text="Get in Touch!"
   className="text-2xl text-[#6497B1] lg:px-7  font-semibold text-center "
   delay={90}
   animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
@@ -319,7 +319,18 @@ export default function Home() {
           </div>
         </section >
 
-        <section id="techstack">
+        <section id="techstack" className=" pt-12 pb-12 px-4 text-center bg-[#c4e0f3]">
+        <SplitText
+  text="Tech Stack"
+  className="text-2xl text-[#6497B1] lg:px-7  font-semibold text-center "
+  delay={90}
+  animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
+  animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+  easing="easeOutCubic"
+  threshold={0.2}
+  rootMargin="-50px"
+ 
+/>
           <AnimatedBeamDemo />
         </section>
       </div>
