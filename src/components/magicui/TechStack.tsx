@@ -46,30 +46,32 @@ export default function AnimatedBeamDemo() {
       <div className="flex size-full lg:h-[500px] h-[400px] max-h-[700px] max-w-3xl flex-col items-stretch justify-between gap-20">
         <div className="flex flex-row items-center justify-between ">
           <Circle ref={div1Ref}>
-            <div className="grayscale-100 hover:grayscale-0 active:grayscale-0 flex flex-row ">
+            <a href="https://drive.google.com/file/d/1FrhowE9yQ7YxdpwD0sXElxxkjQNg9bJ_/view?usp=sharing" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0 flex flex-row cursor-pointer">
             <Icons.html />
             <Icons.css />
-            </div>
+            </a>
           </Circle>
           <Circle ref={div10Ref}>
-            <div className="grayscale-100 hover:grayscale-0 active:grayscale-0">
+            <a href="https://playvalorant.com/id-id/" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0">
             <Icons.valorant />
-            </div>
+            </a>
           </Circle>
           <Circle ref={div11Ref}>
-            <div className="grayscale-100 hover:grayscale-0 active:grayscale-0">
+            <a href="https://drive.google.com/file/d/1ztJYSgqox7As-2D3H5S2cFZFQ0-5ai1P/view?usp=sharing" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0">
             <Icons.python />
-            </div>
+            </a>
           </Circle>
           <Circle ref={div5Ref}>
-            <div className="grayscale-100 hover:grayscale-0 active:grayscale-0">
+            <a href="https://drive.google.com/file/d/1cG3Vyf9bljRQ87CLUOr9quMm1w5m4BGM/view?usp=sharing" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0">
             <Icons.javascript />
-            </div>
+            </a>
           </Circle>
         </div>
-        <div className="flex flex-row items-center justify-between">
+        <div className="flex flex-row items-center justify-between ">
           <Circle ref={div2Ref}>
+            <a href="https://tailwindcss.com/" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0">
             <Icons.tailwind />
+            </a>
           </Circle>
           <Circle ref={div4Ref} className="scale-150 rounded-xl">
             <h2 className="text-[7px] lg:text-[11px] font-semibold text-center">
@@ -77,31 +79,31 @@ export default function AnimatedBeamDemo() {
             </h2>
           </Circle>
           <Circle ref={div6Ref}>
-            <div className="grayscale-100 hover:grayscale-0 active:grayscale-0">
+            <a href="https://react.dev/" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0">
             <Icons.react />
-            </div>
+            </a>
           </Circle>
         </div>
         <div className="flex flex-row  items-center justify-between">
           <Circle ref={div3Ref}>
-            <div className="grayscale-100 hover:grayscale-0 active:grayscale-0">
+            <a href="https://astro.build/" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0">
             <Icons.astro />
-            </div>
+            </a>
           </Circle>
           <Circle ref={div7Ref}>
-            <div className="grayscale-100 hover:grayscale-0 active:grayscale-0">
+            <a href="https://vitejs.dev/" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0">
             <Icons.vite />
-            </div>
+            </a>
           </Circle>
           <Circle ref={div8Ref}>
-            <div className="grayscale-100 hover:grayscale-0 active:grayscale-0">
+            <a href="https://git-scm.com/" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0">
             <Icons.git />
-            </div>
+            </a>
           </Circle>
           <Circle ref={div9Ref}>
-            <div className="  hover:text-[#000000] ">
+            <a href="https://github.com/arliannasrul" target="_blank" className="  hover:text-[#000000] ">
             <Icons.github />
-            </div>
+            </a>
           </Circle>
         </div>
       </div>

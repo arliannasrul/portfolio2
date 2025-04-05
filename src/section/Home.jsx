@@ -4,13 +4,66 @@ import RotatingText from "../components/RotatingText/RotatingText.jsx";
 import AnimatedContent from "../Animation/AnimatedContent/AnimatedContent.jsx";
 import BlurText from "../components/BlurText/BlurText.jsx";
 import Magnet from "../components/Magnet/Magnet.jsx";
-
+import { ScrollProgress } from "../components/magicui/scroll-progress.tsx";
 import AnimatedBeamDemo from "../components/magicui/TechStack.jsx";
+import GridMotion from "../components/GridMotion.jsx";
 
 export default function Home() {
+  const items = [
+    
+
+   
+  
+
+    'https://i.postimg.cc/RVLZ0gXM/animeku.png',
+    'https://i.postimg.cc/bvsy3p8J/catatan.png',
+    'https://i.postimg.cc/13WRG4k2/landing.png',
+    'https://i.postimg.cc/bwYNS1B1/tictactoe.png',
+
+    'https://i.postimg.cc/RVLZ0gXM/animeku.png',
+    'https://i.postimg.cc/bvsy3p8J/catatan.png',
+    'https://i.postimg.cc/13WRG4k2/landing.png',
+    'https://i.postimg.cc/bwYNS1B1/tictactoe.png',
+
+    'https://i.postimg.cc/RVLZ0gXM/animeku.png',
+    'https://i.postimg.cc/bvsy3p8J/catatan.png',
+    'https://i.postimg.cc/RVLZ0gXM/animeku.png',
+    'https://i.postimg.cc/bwYNS1B1/tictactoe.png',
+
+    
+    'https://i.postimg.cc/bvsy3p8J/catatan.png',
+    'https://i.postimg.cc/13WRG4k2/landing.png',
+    'https://i.postimg.cc/bwYNS1B1/tictactoe.png',
+    'https://i.postimg.cc/13WRG4k2/landing.png',
+
+    'https://i.postimg.cc/RVLZ0gXM/animeku.png',
+    'https://i.postimg.cc/bvsy3p8J/catatan.png',
+    'https://i.postimg.cc/13WRG4k2/landing.png',
+    'https://i.postimg.cc/bwYNS1B1/tictactoe.png',
+
+    'https://i.postimg.cc/RVLZ0gXM/animeku.png',
+    'https://i.postimg.cc/bvsy3p8J/catatan.png',
+    'https://i.postimg.cc/13WRG4k2/landing.png',
+    'https://i.postimg.cc/bwYNS1B1/tictactoe.png',
+
+    'https://i.postimg.cc/RVLZ0gXM/animeku.png',
+    'https://i.postimg.cc/bvsy3p8J/catatan.png',
+    'https://i.postimg.cc/13WRG4k2/landing.png',
+    'https://i.postimg.cc/bwYNS1B1/tictactoe.png',
+
+
+
+
+   
+
+    
+ 
+    // Add more items as needed
+  ];
   return (
     <>
       <div className="">
+        <ScrollProgress className=" transition duration-300" />
         <section id="home" className=" flex justify-center ">
           <div className="container">
             <div className="flex flex-wrap ">
@@ -323,7 +376,7 @@ export default function Home() {
         <div className="pb-6">
         <SplitText
   text="Tech Stack"
-  className="text-2xl text-[#6497B1] lg:px-7  font-semibold text-center "
+  className="text-2xl lg:text-4xl text-[#6497B1] lg:px-7  font-semibold text-center "
   delay={90}
   animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
   animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
@@ -334,6 +387,24 @@ export default function Home() {
 />
 </div>
           <AnimatedBeamDemo />
+        </section>
+
+
+        <section id="projects" className="  pb-12  text-center bg-white">
+        <div className="">
+
+</div>
+<div className="">
+<GridMotion items={items} />
+</div>
+<div className="flex justify-center mt-12">
+  <a 
+    href="#projects" 
+    className="px-6 py-2 text-[#6497B1] border-2 border-[#6497B1] rounded-lg hover:bg-[#6497B1] hover:text-white transition-all duration-300 font-medium"
+  >
+    See More
+  </a>
+</div>
         </section>
       </div>
     </>
