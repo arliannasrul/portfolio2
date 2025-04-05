@@ -15,42 +15,40 @@ export default function Home() {
    
   
 
-    'https://i.postimg.cc/RVLZ0gXM/animeku.png',
-    'https://i.postimg.cc/bvsy3p8J/catatan.png',
-    'https://i.postimg.cc/13WRG4k2/landing.png',
-    'https://i.postimg.cc/bwYNS1B1/tictactoe.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png',
 
-    'https://i.postimg.cc/RVLZ0gXM/animeku.png',
-    'https://i.postimg.cc/bvsy3p8J/catatan.png',
-    'https://i.postimg.cc/13WRG4k2/landing.png',
-    'https://i.postimg.cc/bwYNS1B1/tictactoe.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png',
 
-    'https://i.postimg.cc/RVLZ0gXM/animeku.png',
-    'https://i.postimg.cc/bvsy3p8J/catatan.png',
-    'https://i.postimg.cc/RVLZ0gXM/animeku.png',
-    'https://i.postimg.cc/bwYNS1B1/tictactoe.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png',
 
-    
-    'https://i.postimg.cc/bvsy3p8J/catatan.png',
-    'https://i.postimg.cc/13WRG4k2/landing.png',
-    'https://i.postimg.cc/bwYNS1B1/tictactoe.png',
-    'https://i.postimg.cc/13WRG4k2/landing.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878741/animeku_nbn775.png',
+   'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png',
 
-    'https://i.postimg.cc/RVLZ0gXM/animeku.png',
-    'https://i.postimg.cc/bvsy3p8J/catatan.png',
-    'https://i.postimg.cc/13WRG4k2/landing.png',
-    'https://i.postimg.cc/bwYNS1B1/tictactoe.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png',
 
-    'https://i.postimg.cc/RVLZ0gXM/animeku.png',
-    'https://i.postimg.cc/bvsy3p8J/catatan.png',
-    'https://i.postimg.cc/13WRG4k2/landing.png',
-    'https://i.postimg.cc/bwYNS1B1/tictactoe.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png',
 
-    'https://i.postimg.cc/RVLZ0gXM/animeku.png',
-    'https://i.postimg.cc/bvsy3p8J/catatan.png',
-    'https://i.postimg.cc/13WRG4k2/landing.png',
-    'https://i.postimg.cc/bwYNS1B1/tictactoe.png',
-
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/catatan_qnutgq.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png',
+    'https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png',
 
 
 
@@ -372,7 +370,7 @@ export default function Home() {
           </div>
         </section >
 
-        <section id="techstack" className=" pt-12 pb-12 px-4 text-center bg-[#B3CDE0]">
+        <section id="techstack" className=" pt-12 pb-12 px-4 text-center bg-slate-300">
         <div className="pb-6">
         <SplitText
   text="Tech Stack"
@@ -397,7 +395,7 @@ export default function Home() {
 <div className="">
 <GridMotion items={items} />
 </div>
-<div className="flex justify-center mt-12">
+<div className="flex justify-center pt-6">
   <a 
     href="#projects" 
     className="px-6 py-2 text-[#6497B1] border-2 border-[#6497B1] rounded-lg hover:bg-[#6497B1] hover:text-white transition-all duration-300 font-medium"

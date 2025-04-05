@@ -35,6 +35,21 @@ const songs = [
     artist: ".Feast",
     src: "/music/Nina.mp3",
   },
+  {
+    title: "Cry",
+    artist: "Cigarettes After Sex",
+    src: "/music/cry.mp3",
+  },
+  {
+    title: "Apocalypse",
+    artist: "Cigarettes After Sex",
+    src: "/music/apocalypse.mp3",
+  },
+  {
+    title: "No.1 Party Anthem",
+    artist: "Artic Monkeys",
+    src: "/music/no1.mp3",
+  },
  
 ];
 
