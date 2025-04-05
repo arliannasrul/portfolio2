@@ -76,7 +76,15 @@ export default function MusicPlayer() {
     if (isPlaying) {
       audio.pause();
     } else {
-      audio.play().catch((err) => console.log("Gagal play:", err));
+      // Simpan posisi waktu saat ini
+      const currentPosition = audio.currentTime;
+      
+      // Lanjutkan dari posisi yang disimpan
+      audio.currentTime = currentPosition;
+      audio.play().catch((err) => {
+        console.log("Gagal play:", err);
+        setIsPlaying(false);
+      });
     }
     setIsPlaying(!isPlaying);
   };
@@ -84,11 +92,13 @@ export default function MusicPlayer() {
   const nextSong = () => {
     setCurrentSongIndex((prev) => (prev + 1) % songs.length);
     setIsPlaying(true);
+    setCurrentTime(0);
   };
 
   const prevSong = () => {
     setCurrentSongIndex((prev) => (prev - 1 + songs.length) % songs.length);
     setIsPlaying(true);
+    setCurrentTime(0);
   };
 
   const formatTime = (time) => {
