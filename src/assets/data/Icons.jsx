@@ -18,7 +18,7 @@ const Icons = {
             <path d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z"></path>
           </g>
         </svg>
-        <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-black text-white text-xs rounded transition z-10 whitespace-nowrap ${showTooltip ? 'opacity-100' : 'opacity-0 group-hover:opacity-100 group-active:opacity-100'}`}>
+        <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-black text-white text-xs rounded transition z-10 whitespace-nowrap ${showTooltip ? 'opacity-100' : 'opacity-0 group-hover:opacity-100 '}`}>
           TAILWIND CSS
         </div>
       </div>
@@ -60,7 +60,7 @@ const Icons = {
           <path d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z" fill="white"></path>
         </g>
       </svg>
-      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-black text-white text-xs rounded opacity-0 group-hover:opacity-100 group-active:opacity-100 duration-500 transition z-10 whitespace-nowrap">
+      <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-black text-white text-xs rounded ${showToolTip ? 'opacity-100' : 'opacity-0 group-hover:opacity-100 group-active:opacity-100 duration-500 transition z-10 whitespace-nowrap'}`}>
         HTML
       </div>
     </div>
