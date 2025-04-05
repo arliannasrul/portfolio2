@@ -319,7 +319,8 @@ export default function Home() {
           </div>
         </section >
 
-        <section id="techstack" className=" pt-12 pb-12 px-4 text-center bg-[#c4e0f3]">
+        <section id="techstack" className=" pt-12 pb-12 px-4 text-center bg-[#B3CDE0]">
+        <div className="pb-6">
         <SplitText
   text="Tech Stack"
   className="text-2xl text-[#6497B1] lg:px-7  font-semibold text-center "
@@ -331,6 +332,7 @@ export default function Home() {
   rootMargin="-50px"
  
 />
+</div>
           <AnimatedBeamDemo />
         </section>
       </div>
