@@ -7,6 +7,7 @@ import Magnet from "../components/Magnet/Magnet.jsx";
 import { ScrollProgress } from "../components/magicui/scroll-progress.tsx";
 import AnimatedBeamDemo from "../components/magicui/TechStack.jsx";
 import GridMotion from "../components/GridMotion.jsx";
+import FadeContent from "@/components/FadeContent/FadeContent.jsx";
 // DETEKSI EVAL JIKA TERPAKAI
 
 export default function Home() {
@@ -383,7 +384,10 @@ export default function Home() {
               rootMargin="-50px"
             />
           </div>
+
           <AnimatedBeamDemo />
+     
+          
         </section>
 
         <section id="projects" className="  pb-12  text-center bg-white">
@@ -391,6 +395,11 @@ export default function Home() {
           <div className="">
             <GridMotion items={items} />
           </div>
+          
+  
+<FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+  {/* Anything placed inside this container will be fade into view */}
+
           <div className="flex justify-center pt-6">
             <a
               href="#projects"
@@ -399,6 +408,7 @@ export default function Home() {
               See More
             </a>
           </div>
+          </FadeContent>
         </section>
       </div>
     </>

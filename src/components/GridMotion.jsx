@@ -71,7 +71,7 @@ const GridMotion = ({ items = [], gradientColor = "white" }) => {
       >
         {/* Noise overlay */}
       
-        <div className="gap-2 flex-none relative w-[1920px] h-[1080px] grid grid-rows-7 grid-cols-1 lg:-translate-y-[100px] translate-y-[90px] -rotate-12 origin-top z-[2] scale-120 lg:scale-220 ">
+        <div className="gap-2 flex-none relative w-[1920px] h-[1080px] grid grid-rows-7 grid-cols-1 lg:-translate-y-[100px] translate-y-[160px] -rotate-12 origin-top z-[2] scale-130 lg:scale-220 ">
           {[...Array(4)].map((_, rowIndex) => (
             <div
               key={rowIndex}
