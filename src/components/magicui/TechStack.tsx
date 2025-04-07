@@ -43,34 +43,54 @@ export default function AnimatedBeamDemo() {
       className="  relative flex lg:h-[600px] h-[500px] w-full items-center justify-center overflow-hidden p-16 "
       ref={containerRef}
     >
-      <div className="flex size-full lg:h-[500px] h-[400px] max-h-[700px] max-w-3xl flex-col items-stretch justify-between gap-20">
-        <div className="flex flex-row items-center justify-between ">
+      <div className="flex size-full lg:h-[500px] h-[400px] max-h-[700px] max-w-3xl flex-col items-stretch justify-between gap-12">
+        <div className="flex flex-row items-center lg:justify-between justify-center gap-16">
           <Circle ref={div1Ref}>
-            <a href="https://drive.google.com/file/d/1FrhowE9yQ7YxdpwD0sXElxxkjQNg9bJ_/view?usp=sharing" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0 flex flex-row cursor-pointer">
-            <Icons.html />
-            <Icons.css />
+            <a
+              href="https://drive.google.com/file/d/1FrhowE9yQ7YxdpwD0sXElxxkjQNg9bJ_/view?usp=sharing"
+              target="_blank"
+              className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0 flex flex-row cursor-pointer"
+            >
+              <Icons.html />
+              <Icons.css />
             </a>
           </Circle>
           <Circle ref={div10Ref}>
-            <a href="https://playvalorant.com/id-id/" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0">
-            <Icons.valorant />
+            <a
+              href="https://playvalorant.com/id-id/"
+              target="_blank"
+              className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0"
+            >
+              <Icons.valorant />
             </a>
           </Circle>
           <Circle ref={div11Ref}>
-            <a href="https://drive.google.com/file/d/1ztJYSgqox7As-2D3H5S2cFZFQ0-5ai1P/view?usp=sharing" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0">
-            <Icons.python />
+            <a
+              href="https://drive.google.com/file/d/1ztJYSgqox7As-2D3H5S2cFZFQ0-5ai1P/view?usp=sharing"
+              target="_blank"
+              className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0"
+            >
+              <Icons.python />
             </a>
           </Circle>
           <Circle ref={div5Ref}>
-            <a href="https://drive.google.com/file/d/1cG3Vyf9bljRQ87CLUOr9quMm1w5m4BGM/view?usp=sharing" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0">
-            <Icons.javascript />
+            <a
+              href="https://drive.google.com/file/d/1cG3Vyf9bljRQ87CLUOr9quMm1w5m4BGM/view?usp=sharing"
+              target="_blank"
+              className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0"
+            >
+              <Icons.javascript />
             </a>
           </Circle>
         </div>
-        <div className="flex flex-row items-center justify-between ">
+        <div className="flex flex-row items-center lg:justify-between justify-center gap-30">
           <Circle ref={div2Ref}>
-            <a href="https://tailwindcss.com/" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0">
-            <Icons.tailwind />
+            <a
+              href="https://tailwindcss.com/"
+              target="_blank"
+              className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0"
+            >
+              <Icons.tailwind />
             </a>
           </Circle>
           <Circle ref={div4Ref} className="scale-150 rounded-xl">
@@ -79,30 +99,50 @@ export default function AnimatedBeamDemo() {
             </h2>
           </Circle>
           <Circle ref={div6Ref}>
-            <a href="https://react.dev/" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0">
-            <Icons.react />
+            <a
+              href="https://react.dev/"
+              target="_blank"
+              className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0"
+            >
+              <Icons.react />
             </a>
           </Circle>
         </div>
-        <div className="flex flex-row  items-center justify-between">
+        <div className="flex flex-row  items-center lg:justify-between justify-center gap-12">
           <Circle ref={div3Ref}>
-            <a href="https://astro.build/" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0">
-            <Icons.astro />
+            <a
+              href="https://astro.build/"
+              target="_blank"
+              className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0"
+            >
+              <Icons.astro />
             </a>
           </Circle>
           <Circle ref={div7Ref}>
-            <a href="https://vitejs.dev/" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0">
-            <Icons.vite />
+            <a
+              href="https://vitejs.dev/"
+              target="_blank"
+              className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0"
+            >
+              <Icons.vite />
             </a>
           </Circle>
           <Circle ref={div8Ref}>
-            <a href="https://git-scm.com/" target="_blank" className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0">
-            <Icons.git />
+            <a
+              href="https://git-scm.com/"
+              target="_blank"
+              className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0"
+            >
+              <Icons.git />
             </a>
           </Circle>
           <Circle ref={div9Ref}>
-            <a href="https://github.com/arliannasrul" target="_blank" className="  hover:text-[#000000] ">
-            <Icons.github />
+            <a
+              href="https://github.com/arliannasrul"
+              target="_blank"
+              className="  hover:text-[#000000] "
+            >
+              <Icons.github />
             </a>
           </Circle>
         </div>
@@ -147,9 +187,8 @@ export default function AnimatedBeamDemo() {
         toRef={div4Ref}
         curvature={75}
         endYOffset={10}
-        
       />
-       <AnimatedBeam
+      <AnimatedBeam
         containerRef={containerRef}
         fromRef={div9Ref}
         toRef={div4Ref}
@@ -157,7 +196,7 @@ export default function AnimatedBeamDemo() {
         endYOffset={10}
         reverse
       />
-             <AnimatedBeam
+      <AnimatedBeam
         containerRef={containerRef}
         fromRef={div8Ref}
         toRef={div4Ref}
@@ -165,15 +204,14 @@ export default function AnimatedBeamDemo() {
         endYOffset={10}
         reverse
       />
-                   <AnimatedBeam
+      <AnimatedBeam
         containerRef={containerRef}
         fromRef={div10Ref}
         toRef={div4Ref}
         curvature={-75}
         endYOffset={10}
-       
       />
-                         <AnimatedBeam
+      <AnimatedBeam
         containerRef={containerRef}
         fromRef={div11Ref}
         toRef={div4Ref}
@@ -181,7 +219,6 @@ export default function AnimatedBeamDemo() {
         endYOffset={10}
         reverse
       />
-      
     </div>
   );
 }

@@ -1,9 +1,9 @@
-'use client'
-import { useEffect, useRef, useState } from 'react';
+"use client";
+import { useEffect, useRef, useState } from "react";
 
-import { gsap } from 'gsap';
+import { gsap } from "gsap";
 
-const GridMotion = ({ items = [], gradientColor = 'white' }) => {
+const GridMotion = ({ items = [], gradientColor = "white" }) => {
   const gridRef = useRef(null);
   const rowRefs = useRef([]); // Array of refs for each row
   const [mounted, setMounted] = useState(false);
@@ -11,13 +11,17 @@ const GridMotion = ({ items = [], gradientColor = 'white' }) => {
 
   // Ensure the grid has 28 items (4 rows x 7 columns) by default
   const totalItems = 28;
-  const defaultItems = Array.from({ length: totalItems }, (_, index) => `Item ${index + 1}`);
-  const combinedItems = items.length > 0 ? items.slice(0, totalItems) : defaultItems;
+  const defaultItems = Array.from(
+    { length: totalItems },
+    (_, index) => `Item ${index + 1}`,
+  );
+  const combinedItems =
+    items.length > 0 ? items.slice(0, totalItems) : defaultItems;
 
   useEffect(() => {
     setMounted(true);
     mouseXRef.current = window.innerWidth / 2;
-    
+
     gsap.ticker.lagSmoothing(0);
 
     const handleMouseMove = (e) => {
@@ -32,24 +36,28 @@ const GridMotion = ({ items = [], gradientColor = 'white' }) => {
       rowRefs.current.forEach((row, index) => {
         if (row) {
           const direction = index % 2 === 0 ? 1 : -1;
-          const moveAmount = ((mouseXRef.current / window.innerWidth) * maxMoveAmount - maxMoveAmount / 2) * direction;
+          const moveAmount =
+            ((mouseXRef.current / window.innerWidth) * maxMoveAmount -
+              maxMoveAmount / 2) *
+            direction;
 
           // Apply inertia and staggered stop
           gsap.to(row, {
             x: moveAmount,
-            duration: baseDuration + inertiaFactors[index % inertiaFactors.length],
-            ease: 'power3.out',
-            overwrite: 'auto',
+            duration:
+              baseDuration + inertiaFactors[index % inertiaFactors.length],
+            ease: "power3.out",
+            overwrite: "auto",
           });
         }
       });
     };
 
     const removeAnimationLoop = gsap.ticker.add(updateMotion);
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
       removeAnimationLoop();
     };
   }, []);
@@ -59,33 +67,25 @@ const GridMotion = ({ items = [], gradientColor = 'white' }) => {
   return (
     <div ref={gridRef} className="h-full w-full overflow-hidden">
       <section
-        className="w-full h-screen overflow-hidden relative flex items-center justify-center"
-        style={{
-          background: `radial-gradient(circle, ${gradientColor} 0%, transparent 100%`,
-        }}
+        className="w-full h-[70vh] lg:h-screen overflow-hidden relative flex items-center justify-center"
       >
         {/* Noise overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none z-[4] bg-[url('../../../assets/noise.png')] bg-[length:250px]"
-        ></div>
-        <div
-          className="gap-2 flex-none relative w-[1920px] h-[1080px] grid grid-rows-7 grid-cols-1 -translate-y-[100px] -rotate-12 origin-top z-[2] scale-220 "
-        >
+      
+        <div className="gap-2 flex-none relative w-[1920px] h-[1080px] grid grid-rows-7 grid-cols-1 lg:-translate-y-[100px] translate-y-[90px] -rotate-12 origin-top z-[2] scale-120 lg:scale-220 ">
           {[...Array(4)].map((_, rowIndex) => (
             <div
               key={rowIndex}
               className="grid gap-2 grid-cols-7"
-              style={{ willChange: 'transform, filter' }}
+              style={{ willChange: "transform, filter" }}
               ref={(el) => (rowRefs.current[rowIndex] = el)}
             >
               {[...Array(7)].map((_, itemIndex) => {
                 const content = combinedItems[rowIndex * 7 + itemIndex];
                 return (
                   <div key={itemIndex} className="relative aspect-auto">
-                    <div
-                      className="relative w-full h-full bg-cover bg-center top-0 left-0 bottom-0 overflow-hidden rounded-[10px] shadow-2xl bg-[#111] flex items-center justify-center text-white text-[1.5rem]"
-                    >
-                      {typeof content === 'string' && content.startsWith('http') ? (
+                    <div className="relative w-full h-full bg-cover bg-center top-0 left-0 bottom-0 overflow-hidden rounded-[10px] shadow-sm bg-[#111] flex items-center justify-center text-white text-[1.5rem]">
+                      {typeof content === "string" &&
+                      content.startsWith("http") ? (
                         <div
                           className="w-full h-full bg-cover bg-center absolute top-0 left-0"
                           style={{ backgroundImage: `url(${content})` }}

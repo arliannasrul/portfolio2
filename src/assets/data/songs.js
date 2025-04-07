@@ -50,8 +50,6 @@ const songs = [
     artist: "Artic Monkeys",
     src: "/music/no1.mp3",
   },
- 
 ];
-
 
 export default songs;

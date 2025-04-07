@@ -20,7 +20,8 @@ export default function MusicPlayer() {
     const loadAudio = async () => {
       try {
         const response = await fetch(songs[currentSongIndex].src);
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        if (!response.ok)
+          throw new Error(`HTTP error! status: ${response.status}`);
         const blob = await response.blob();
 
         // Revoke blob lama
@@ -58,7 +59,7 @@ export default function MusicPlayer() {
     if (!audio) return;
 
     if (isPlaying) {
-      audio.play().catch(err => {
+      audio.play().catch((err) => {
         console.error("Playback error:", err);
         setIsPlaying(false);
       });
@@ -88,7 +89,7 @@ export default function MusicPlayer() {
   }, []);
 
   const togglePlayPause = () => {
-    setIsPlaying(prev => !prev);
+    setIsPlaying((prev) => !prev);
   };
 
   const nextSong = () => {
@@ -109,7 +110,9 @@ export default function MusicPlayer() {
   const formatTime = (time) => {
     if (isNaN(time)) return "00:00";
     const minutes = Math.floor(time / 60);
-    const seconds = Math.floor(time % 60).toString().padStart(2, "0");
+    const seconds = Math.floor(time % 60)
+      .toString()
+      .padStart(2, "0");
     return `${minutes}:${seconds}`;
   };
 
@@ -123,14 +126,21 @@ export default function MusicPlayer() {
           playsInline
           controlsList="nodownload noplaybackrate"
           onContextMenu={(e) => e.preventDefault()}
-          style={{ display: 'none' }}
+          style={{ display: "none" }}
         />
         <Music className="text-[#6497b1]" size={20} />
         <div className="col-span-2">
-          <p className="text-sm font-semibold">{songs[currentSongIndex].title}</p>
-          <p className="text-xs text-gray-500">{songs[currentSongIndex].artist}</p>
+          <p className="text-sm font-semibold">
+            {songs[currentSongIndex].title}
+          </p>
+          <p className="text-xs text-gray-500">
+            {songs[currentSongIndex].artist}
+          </p>
         </div>
-        <button onClick={prevSong} className=" flex justify-center text-gray-500 hover:text-blue-500">
+        <button
+          onClick={prevSong}
+          className=" flex justify-center text-gray-500 hover:text-blue-500"
+        >
           <SkipBack size={20} />
         </button>
         <button
@@ -139,7 +149,10 @@ export default function MusicPlayer() {
         >
           {isPlaying ? <Pause size={20} /> : <Play size={20} />}
         </button>
-        <button onClick={nextSong} className= " flex justify-center text-gray-500 hover:text-blue-500">
+        <button
+          onClick={nextSong}
+          className=" flex justify-center text-gray-500 hover:text-blue-500"
+        >
           <SkipForward size={20} />
         </button>
 

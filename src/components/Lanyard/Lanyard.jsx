@@ -39,16 +39,16 @@ export default function Lanyard({
     const checkMobile = () => {
       setIsSmall(window.innerWidth < 1024);
     };
-    
+
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   const handleDoubleTap = () => {
     const currentTime = new Date().getTime();
     const tapLength = currentTime - lastTapTime;
-    
+
     if (tapLength < 300 && tapLength > 0) {
       setIsFlipped(!isFlipped);
     }
@@ -56,18 +56,19 @@ export default function Lanyard({
   };
 
   return (
-    <div 
+    <div
       className="relative h-screen w-full flex justify-center items-center transform scale-100 origin-top"
       onClick={isSmall ? handleDoubleTap : undefined}
     >
       {isSmall && (
-        
-        <div className="z-0 fixed bottom-28 left-1/2 transform -translate-x-1/2 
+        <div
+          className="z-0 fixed bottom-28 left-1/2 transform -translate-x-1/2 
         px-6 py-2 
       text-[#6497b179] text-sm font-medium
-    ">
-      DOUBLE TAP TO FLIP 
-    </div>
+    "
+        >
+          DOUBLE TAP TO FLIP
+        </div>
       )}
 
       <Canvas
@@ -79,9 +80,9 @@ export default function Lanyard({
       >
         <ambientLight intensity={Math.PI} />
         <Physics gravity={gravity} timeStep={1 / 60}>
-          <Band 
-            isFlipped={isFlipped} 
-            isSmall={isSmall} 
+          <Band
+            isFlipped={isFlipped}
+            isSmall={isSmall}
             setIsFlipped={setIsFlipped}
           />
         </Physics>
@@ -119,7 +120,13 @@ export default function Lanyard({
     </div>
   );
 }
-function Band({ maxSpeed = 50, minSpeed = 0, isFlipped, isSmall, setIsFlipped }) {
+function Band({
+  maxSpeed = 50,
+  minSpeed = 0,
+  isFlipped,
+  isSmall,
+  setIsFlipped,
+}) {
   const band = useRef(),
     fixed = useRef(),
     j1 = useRef(),
@@ -172,9 +179,9 @@ function Band({ maxSpeed = 50, minSpeed = 0, isFlipped, isSmall, setIsFlipped })
       vec.set(state.pointer.x, state.pointer.y, 0.5).unproject(state.camera);
       dir.copy(vec).sub(state.camera.position).normalize();
       vec.add(dir.multiplyScalar(state.camera.position.length()));
-      
+
       const dragSpeed = isSmall ? 1.5 : 1.0;
-      
+
       [card, j1, j2, j3, fixed].forEach((ref) => ref.current?.wakeUp());
       card.current?.setNextKinematicTranslation({
         x: (vec.x - dragged.x) * dragSpeed,
@@ -195,7 +202,9 @@ function Band({ maxSpeed = 50, minSpeed = 0, isFlipped, isSmall, setIsFlipped })
         );
         ref.current.lerped.lerp(
           ref.current.translation(),
-          delta * (minSpeed + clampedDistance * (maxSpeed - minSpeed)) * mobileFactor,
+          delta *
+            (minSpeed + clampedDistance * (maxSpeed - minSpeed)) *
+            mobileFactor,
         );
       });
       curve.points[0].copy(j3.current.translation());
@@ -208,10 +217,10 @@ function Band({ maxSpeed = 50, minSpeed = 0, isFlipped, isSmall, setIsFlipped })
       const targetRotation = isFlipped ? Math.PI : 0;
       const currentRotation = rot.y;
       const rotationStep = (targetRotation - currentRotation) * 0.1;
-      card.current.setAngvel({ 
-        x: ang.x, 
-        y: ang.y - rot.y * 0.2 + rotationStep, 
-        z: ang.z 
+      card.current.setAngvel({
+        x: ang.x,
+        y: ang.y - rot.y * 0.2 + rotationStep,
+        z: ang.z,
       });
     }
   });
@@ -245,31 +254,31 @@ function Band({ maxSpeed = 50, minSpeed = 0, isFlipped, isSmall, setIsFlipped })
             onPointerOver={(e) => {
               hover(true);
               if (!isSmall) {
-                const tooltip = document.createElement('div');
-                tooltip.id = 'lanyard-tooltip';
-                tooltip.style.position = 'fixed';
+                const tooltip = document.createElement("div");
+                tooltip.id = "lanyard-tooltip";
+                tooltip.style.position = "fixed";
                 tooltip.style.left = `${e.clientX + 10}px`;
                 tooltip.style.top = `${e.clientY - 20}px`;
-                tooltip.style.padding = '4px 8px';
-                tooltip.style.background = 'rgba(255, 255, 255, 0.64)';
-                tooltip.style.color = 'black';
-                tooltip.style.borderRadius = '4px';
-                tooltip.style.fontSize = '14px';
-                tooltip.style.pointerEvents = 'none';
-                tooltip.style.zIndex = '1000';
-                tooltip.textContent = 'Double click me!';
+                tooltip.style.padding = "4px 8px";
+                tooltip.style.background = "rgba(255, 255, 255, 0.64)";
+                tooltip.style.color = "black";
+                tooltip.style.borderRadius = "4px";
+                tooltip.style.fontSize = "14px";
+                tooltip.style.pointerEvents = "none";
+                tooltip.style.zIndex = "1000";
+                tooltip.textContent = "Double click me!";
                 document.body.appendChild(tooltip);
               }
             }}
             onPointerOut={() => {
               hover(false);
-              const tooltip = document.getElementById('lanyard-tooltip');
+              const tooltip = document.getElementById("lanyard-tooltip");
               if (tooltip) {
                 tooltip.remove();
               }
             }}
             onPointerMove={(e) => {
-              const tooltip = document.getElementById('lanyard-tooltip');
+              const tooltip = document.getElementById("lanyard-tooltip");
               if (tooltip) {
                 tooltip.style.left = `${e.clientX + 10}px`;
                 tooltip.style.top = `${e.clientY - 20}px`;

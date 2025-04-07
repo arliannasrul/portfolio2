@@ -11,7 +11,7 @@ const AnimatedContent = ({
   animateOpacity = true,
   scale = 1,
   threshold = 0.1,
-  delay = 0
+  delay = 0,
 }) => {
   const [inView, setInView] = useState(false);
   const ref = useRef();
@@ -28,7 +28,7 @@ const AnimatedContent = ({
           }, delay);
         }
       },
-      { threshold }
+      { threshold },
     );
 
     observer.observe(ref.current);
@@ -48,9 +48,9 @@ const AnimatedContent = ({
     },
     to: inView
       ? {
-        transform: `translate${directions[direction]}(0px) scale(1)`,
-        opacity: 1,
-      }
+          transform: `translate${directions[direction]}(0px) scale(1)`,
+          opacity: 1,
+        }
       : undefined,
     config,
   });
