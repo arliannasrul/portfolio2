@@ -61,8 +61,8 @@ export default function AnimatedBeamDemo() {
     
       
     
-      <div className="flex size-full lg:h-[500px] h-[400px] max-h-[700px] max-w-3xl flex-col items-stretch justify-between gap-12">
-        <div className="flex flex-row items-center lg:justify-between justify-center gap-16">
+      <div className="flex size-full lg:h-[500px] h-[400px] max-h-[700px] max-w-4xl flex-col items-stretch justify-between gap-12">
+        <div className="flex flex-row items-center lg:justify-between justify-center gap-8 sm:gap-20 md:gap-34 lg:gap-40">
    
   
   
@@ -70,7 +70,7 @@ export default function AnimatedBeamDemo() {
             <a
               href="https://drive.google.com/file/d/1FrhowE9yQ7YxdpwD0sXElxxkjQNg9bJ_/view?usp=sharing"
               target="_blank"
-              className={`lg:grayscale-100 hover:grayscale-0 active:grayscale-0 flex flex-row cursor-pointer  transition-all' `}
+              className="lg:grayscale-100 hover:grayscale-0 active:grayscale-0 flex flex-row cursor-pointer  transition-all"
             >
               <Icons.html />
               <Icons.css />
@@ -107,7 +107,7 @@ export default function AnimatedBeamDemo() {
             </a>
           </Circle>
         </div>
-        <div className="flex flex-row items-center lg:justify-between justify-center gap-30">
+        <div className="flex flex-row items-center lg:justify-between justify-center gap-20 sm:gap-37 md:gap-57 lg:gap-64">
           <Circle ref={div2Ref} className={`${visible ? "opacity-100" : "opacity-0"} transition-opacity duration-2000  delay-800`}>
             <a
               href="https://tailwindcss.com/"
@@ -132,7 +132,7 @@ export default function AnimatedBeamDemo() {
             </a>
           </Circle>
         </div>
-        <div className="flex flex-row  items-center lg:justify-between justify-center gap-12">
+        <div className="flex flex-row  items-center lg:justify-between justify-center gap-8 sm:gap-20 md:gap-34 lg:gap-40">
           <Circle ref={div3Ref} className={`${visible ? "opacity-100" : "opacity-0"} transition-opacity duration-2000  delay-1200`}>
             <a
               href="https://astro.build/"

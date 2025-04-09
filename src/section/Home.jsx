@@ -58,8 +58,8 @@ export default function Home() {
   return (
     <>
       <div className="">
-        <ScrollProgress className=" transition duration-300" />
-        <section id="home" className=" flex justify-center ">
+        <ScrollProgress className=" transition" />
+        <section id="home" className=" flex justify-center lg:px-18">
           <div className="container">
             <div className="flex flex-wrap ">
               <div className=" w-full self-center px-4 lg:w-1/2 pt-26 lg:pt-0 pb-6">
@@ -130,12 +130,12 @@ export default function Home() {
                     >
                       <RotatingText
                         texts={[
-                          "College Student",
+                          "Information Systems Student",
                           "Web Developer",
                           "Tech Enthusiast",
                           "Gamer",
                         ]}
-                        mainClassName=" min-w-[205px] max-w-[205px]  text-slate-500 overflow-hidden  flex text-center justify-center rounded-lg text-lg lg:text-xl text-bold inline-block transition-all"
+                        mainClassName=" min-w-[205px] max-w-[400px]  text-slate-500 overflow-hidden  flex text-center justify-center rounded-lg text-lg lg:text-xl text-bold inline-block transition-all"
                         staggerFrom={"last"}
                         initial={{ y: "100%", opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
@@ -170,10 +170,10 @@ export default function Home() {
                     href="https://docs.google.com/document/d/12aV7gNu7xec1ggA0ST0ZuRgXP4l-YyqYmqT4q6fcEIM/export?format=pdf"
                   >
                     <Magnet padding={50} disabled={false} magnetStrength={2}>
-                      <button className="active:scale-80 transition-all">
-                        <h3 className="bg-[#6497B1]  p-3 rounded-3xl text-white font-semibold">
-                          Download CV
-                        </h3>
+                      <button className="active:scale-80 transition-all cursor-pointer">
+                        <a className="   border-3  border-[#6497B1] p-3 rounded-3xl text-[#6497B1] font-semibold pointer-events-auto hover:bg-[#6497B1] hover:text-white transition">
+                          Download Resume
+                        </a>
                       </button>
                     </Magnet>
                   </a>
@@ -390,7 +390,7 @@ export default function Home() {
           
         </section>
 
-        <section id="projects" className="  pb-12  text-center bg-white">
+        <section id="portfolio" className="  pb-12  text-center bg-white">
           <div className=""></div>
           <div className="">
             <GridMotion items={items} />

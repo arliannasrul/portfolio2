@@ -92,7 +92,7 @@ export default function Navbar() {
                       {[
                         { href: "#home", text: "Home" },
                         { href: "#sertification", text: "Sertification" },
-                        { href: "#techStack", text: "Tech Stack" },
+                        { href: "#techstack", text: "Tech Stack" },
                         { href: "#experience", text: "Experience" },
                         { href: "#portfolio", text: "Portfolio" },
                         { href: "#contact", text: "Contact" },
