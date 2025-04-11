@@ -67,7 +67,7 @@ export default function Home() {
                   <div className=" -mb-7 pb-2">
                     <SplitText
                       text="Arlian Nasrul Ramadhani"
-                      className=" text-3xl lg:text-5xl font-semibold   text-slate-800 "
+                      className=" text-3xl lg:text-4xl xl:text-5xl font-semibold   text-slate-800 "
                       delay={50}
                       animationFrom={{
                         opacity: 0,
@@ -171,9 +171,9 @@ export default function Home() {
                   >
                     <Magnet padding={50} disabled={false} magnetStrength={2}>
                       <button className="active:scale-80 transition-all cursor-pointer">
-                        <a className="   border-3  border-[#6497B1] p-3 rounded-3xl text-[#6497B1] font-semibold pointer-events-auto hover:bg-[#6497B1] hover:text-white transition">
+                        <div className="  text-sm border-3  border-[#6497B1] p-2 rounded-3xl text-[#6497B1] font-semibold pointer-events-auto hover:bg-[#6497B1] hover:text-white transition">
                           Download Resume
-                        </a>
+                        </div>
                       </button>
                     </Magnet>
                   </a>

@@ -130,10 +130,10 @@ export default function MusicPlayer() {
         />
         <Music className="text-[#6497b1]" size={20} />
         <div className="col-span-2">
-          <p className="text-sm font-semibold">
+          <p className="text-xs font-semibold">
             {songs[currentSongIndex].title}
           </p>
-          <p className="text-xs text-gray-500">
+          <p className="text-[10px] text-gray-500">
             {songs[currentSongIndex].artist}
           </p>
         </div>
