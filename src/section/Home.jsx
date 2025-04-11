@@ -67,7 +67,7 @@ export default function Home() {
                   <div className=" -mb-7 pb-2">
                     <SplitText
                       text="Arlian Nasrul Ramadhani"
-                      className=" text-3xl lg:text-4xl xl:text-5xl font-semibold   text-slate-800 "
+                      className=" text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold   text-slate-800 "
                       delay={50}
                       animationFrom={{
                         opacity: 0,
@@ -86,7 +86,7 @@ export default function Home() {
                   <div className="pb-2 ">
                     <SplitText
                       text="Front-End Web Developer"
-                      className="text-2xl lg:text-4xl font-bold text-[#6497B1]  "
+                      className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-[#6497B1]  "
                       delay={90}
                       animationFrom={{
                         opacity: 0,
@@ -112,7 +112,7 @@ export default function Home() {
                       scale={1.0}
                       threshold={0.2}
                     >
-                      <h1 className=" text-lg lg:text-xl text-slate-600 transition-all">
+                      <h1 className=" text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-slate-500 transition-all ">
                         {" "}
                         I'm a
                       </h1>
@@ -135,7 +135,7 @@ export default function Home() {
                           "Tech Enthusiast",
                           "Gamer",
                         ]}
-                        mainClassName=" min-w-[205px] max-w-[400px]  text-slate-500 overflow-hidden  flex text-center justify-center rounded-lg text-lg lg:text-xl text-bold inline-block transition-all"
+                        mainClassName=" min-w-[205px] max-w-[500px]  text-[#6497B1] overflow-hidden  flex text-center justify-center rounded-lg text-lg lg:text-xl xl:text-2xl 2xl:text-3xl  inline-block transition-all"
                         staggerFrom={"last"}
                         initial={{ y: "100%", opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
@@ -171,7 +171,7 @@ export default function Home() {
                   >
                     <Magnet padding={50} disabled={false} magnetStrength={2}>
                       <button className="active:scale-80 transition-all cursor-pointer">
-                        <div className="  text-sm border-3  border-[#6497B1] p-2 rounded-3xl text-[#6497B1] font-semibold pointer-events-auto hover:bg-[#6497B1] hover:text-white transition">
+                        <div className="  text-sm border-2 lg:text-lg   border-[#6497B1] p-2 rounded-3xl text-[#6497B1] font-semibold pointer-events-auto hover:bg-[#6497B1] hover:text-white transition">
                           Download Resume
                         </div>
                       </button>
@@ -193,7 +193,7 @@ export default function Home() {
                 <div className="pb-2 ">
                   <SplitText
                     text="About Gw"
-                    className="text-2xl text-[#6497B1] font-semibold text-center  "
+                    className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[#6497B1] font-semibold text-center  "
                     delay={90}
                     animationFrom={{
                       opacity: 0,
@@ -213,14 +213,14 @@ export default function Home() {
                   delay={50}
                   animateBy="words"
                   direction="top"
-                  className="text-lg mb-8  "
+                  className="text-sm lg:text-lg xl:text-xl 2xl:text-2xl gap-1 mb-8  "
                 />
               </div>
 
-              <div className="w-full  mb-12 lg:w-[25%]  ">
+              <div className="w-full  mb-12 lg:w-[25%]  lg:pl-10">
                 <SplitText
                   text="Get in Touch!"
-                  className="text-2xl text-[#6497B1] lg:px-7  font-semibold text-center "
+                  className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[#6497B1] lg:px-7   font-semibold text-center "
                   delay={90}
                   animationFrom={{
                     opacity: 0,
@@ -241,7 +241,7 @@ export default function Home() {
                   scale={1.1}
                   threshold={0.2}
                 >
-                  <div className="lg:pl-6  lg:border-l-2 border-[#6497B1]">
+                  <div className="lg:pl-6 text-sm lg:text-lg xl:text-xl 2xl:text-2xl lg:border-l-2 border-[#6497B1]">
                     <p className="font-poppins  pt-5 pb-6 max-w-xl">
                       Mari berteman denganku.
                     </p>
@@ -375,7 +375,7 @@ export default function Home() {
           <div className="pb-6">
             <SplitText
               text="Tech Stack"
-              className="text-2xl lg:text-4xl text-[#6497B1] lg:px-7  font-semibold text-center "
+              className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[#6497B1] lg:px-7  font-semibold text-center "
               delay={90}
               animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
               animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
