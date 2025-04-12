@@ -45,9 +45,9 @@ const IntroType = ({onFinish}) => {
   if (phase === 'done') return null;
 
   return (
-    <div className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-white text-xl font-mono transition-all duration-1000 ${fadeOut ? 'opacity-0 scale-75' : 'opacity-100 scale-100'}`}>
+    <div className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-white text-xl  transition-all duration-1000 ${fadeOut ? 'opacity-0 scale-75' : 'opacity-100 scale-100'}`}>
            {phase === 'typing' && (
-            <div>
+            <div className='font-mono'>
               <span className="text-slate-600">{terminal}</span>
               <span className="text-green-400">
                 {text}
@@ -57,7 +57,7 @@ const IntroType = ({onFinish}) => {
           )}
       {phase === 'loading' && (
         <div className="flex flex-col items-center gap-2 mt-6 text-white">
-          <p className="text-lg text-slate-600">Running Portfolio Website 🚀</p>
+          <p className="text-lg font-poppins text-slate-600">Running Portfolio Website 🚀</p>
           <div className="flex gap-1">
             <span className="w-2 h-2 bg-green-400 rounded-full animate-bounce [animation-delay:0.1s]" />
             <span className="w-2 h-2 bg-green-400 rounded-full animate-bounce [animation-delay:0.3s]" />
