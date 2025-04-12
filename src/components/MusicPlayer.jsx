@@ -193,15 +193,15 @@ export default function MusicPlayer() {
             <button
               key={index}
               onClick={() => handleSongSelect(index)}
-              className={`w-full flex items-center p-3 rounded-lg transform transition-all duration-200 hover:scale-[0.99] ${
+              className={`w-full flex items-center p-2 rounded-lg transform transition-all duration-200 hover:scale-[0.99] ${
                 currentSongIndex === index
                   ? "bg-blue-50 text-[#6497b1]"
                   : "hover:bg-gray-50"
               }`}
             >
               <div className="flex-1 text-left">
-                <p className="font-medium">{song.title}</p>
-                <p className="text-sm text-gray-500">{song.artist}</p>
+                <p className="text-sm">{song.title}</p>
+                <p className="text-xs text-gray-500">{song.artist}</p>
               </div>
               {currentSongIndex === index && isPlaying && (
                 <div className="w-4 h-4 rounded-full bg-[#6497b1] flex items-center justify-center">
