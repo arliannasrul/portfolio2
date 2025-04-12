@@ -28,10 +28,10 @@ const IntroType = ({onFinish}) => {
                 setTimeout(() => {
                   setPhase('done');
                   onFinish?.(); // trigger Home muncul
-                }, 500); // waktu fade out
-              }, 3000); // durasi animasi loading
+                }, 1000); // waktu fade out
+              }, 3500); // durasi animasi loading
   
-            }, 1000); // delay setelah selesai ngetik
+            }, 2500); // delay setelah selesai ngetik
           }
   
           return prev + nextChar;
@@ -45,23 +45,24 @@ const IntroType = ({onFinish}) => {
   if (phase === 'done') return null;
 
   return (
-    <div className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-white text-xl  transition-all duration-1000 ${fadeOut ? 'opacity-0 scale-75' : 'opacity-100 scale-100'}`}>
+    <div className={`fixed inset-0 z-50 flex flex-col  ${phase == 'loading'? 'items-center ' : 'items-start'} justify-center bg-white  text-xl lg:text-2xl  transition-all duration-1000 ${fadeOut ? 'opacity-0 -translate-y-40' : 'opacity-100 translate-y-0'} `}>
            {phase === 'typing' && (
-            <div className='font-mono'>
+            <div className='font-mono pl-6'>
               <span className="text-slate-600">{terminal}</span>
-              <span className="text-green-400">
+              <span className="text-green-400 font-light">
                 {text}
-                <span className="animate-pulse">|</span>
+                <span className="animate-pulse duration-75">|</span>
               </span>
             </div>
           )}
       {phase === 'loading' && (
-        <div className="flex flex-col items-center gap-2 mt-6 text-white">
-          <p className="text-lg font-poppins text-slate-600">Running Portfolio Website 🚀</p>
-          <div className="flex gap-1">
-            <span className="w-2 h-2 bg-green-400 rounded-full animate-bounce [animation-delay:0.1s]" />
-            <span className="w-2 h-2 bg-green-400 rounded-full animate-bounce [animation-delay:0.3s]" />
-            <span className="w-2 h-2 bg-green-400 rounded-full animate-bounce [animation-delay:0.5s]" />
+        <div className="flex flex-col items-center  gap-2 mt-6 text-white ">
+          <p className=" text-lg lg:text-3xl font-poppins text-slate-600">Running Portfolio Website 🚀</p>
+          <div className="flex gap-1 pt-2">
+            <span className="w-4 h-4 bg-[#6497B1] rounded-full animate-bounce [animation-delay:0.1s]" />
+            <span className="w-4 h-4 bg-[#6497B1] rounded-full animate-bounce [animation-delay:0.3s]" />
+            <span className="w-4 h-4 bg-[#6497B1] rounded-full animate-bounce [animation-delay:0.5s]" />
+            <span className="w-4 h-4 bg-[#6497B1] rounded-full animate-bounce [animation-delay:0.7s]" />
           </div>
         </div>
       )}   

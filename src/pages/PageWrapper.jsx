@@ -10,7 +10,7 @@ const PageWrapper = () => {
   return (
     <>
       {!showMain && <Intro onFinish={() => setShowMain(true)} />}
-        <div className={`transition-all duration-1000 ease-out${showMain? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'}  relative z-10`}>
+        <div className={`transition-all duration-1000 ease-in-out${showMain? 'opacity-100 ' : 'opacity-0  '}  relative z-10`}>
       {showMain && (
         <>
           <Home show={showMain} />
