@@ -8,9 +8,20 @@ import { ScrollProgress } from "../components/magicui/scroll-progress.tsx";
 import AnimatedBeamDemo from "../components/magicui/TechStack.jsx";
 import GridMotion from "../components/GridMotion.jsx";
 import FadeContent from "@/components/FadeContent/FadeContent.jsx";
+import { useEffect, useState } from "react";
+
 // DETEKSI EVAL JIKA TERPAKAI
 
-export default function Home() {
+export default function Home({show}) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    if (show) {
+      setMounted(true);
+    }
+  }, [show]);
+
+
   {
     /*items for grid motion*/
   }
@@ -50,13 +61,16 @@ export default function Home() {
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/landing_imcd64.png",
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
     "https://res.cloudinary.com/dpxd2wzjr/image/upload/v1743878740/tictactoe_ljlqqw.png",
-0.5
+
     // Add more items as needed
   ];
 
   
   return (
-    <>
+   
+    <div     className={`transition-all duration-700 ${
+      mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+    }`}>
       <div className="">
         <ScrollProgress className=" transition" />
         <section id="home" className=" flex justify-center lg:px-18">
@@ -411,6 +425,8 @@ export default function Home() {
           </FadeContent>
         </section>
       </div>
-    </>
-  );
+    </div>
+  
+);
+
 }
