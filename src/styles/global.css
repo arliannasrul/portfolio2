@@ -7,7 +7,11 @@
 body {
   font-family: "Poppins", serif;
 }
-
+html,
+body {
+  height: 100%;
+  overflow-y: auto;
+}
 .font-poppins {
   font-family: "Poppins", serif;
 }

@@ -4,11 +4,12 @@ import RotatingText from "../components/RotatingText/RotatingText.jsx";
 import AnimatedContent from "../Animation/AnimatedContent/AnimatedContent.jsx";
 import BlurText from "../components/BlurText/BlurText.jsx";
 import Magnet from "../components/Magnet/Magnet.jsx";
-import { ScrollProgress } from "../components/magicui/scroll-progress.tsx";
+
 import AnimatedBeamDemo from "../components/magicui/TechStack.jsx";
 import GridMotion from "../components/GridMotion.jsx";
 import FadeContent from "@/components/FadeContent/FadeContent.jsx";
 import { useEffect, useState } from "react";
+
 
 // DETEKSI EVAL JIKA TERPAKAI
 
@@ -72,7 +73,7 @@ export default function Home({show}) {
       mounted ? 'opacity-100 ' : 'opacity-0'
     }`}>
       <div className="">
-        <ScrollProgress className=" transition" />
+        
         <section id="home" className=" flex justify-center lg:px-18">
           <div className="container">
             <div className="flex flex-wrap ">
