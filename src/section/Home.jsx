@@ -78,7 +78,7 @@ export default function Home({show}) {
             <div className="flex flex-wrap ">
               <div className=" w-full self-center px-4 lg:w-1/2 pt-26 lg:pt-0 pb-6">
                 <div className="  text-base   gap-2 font-semibold md:text-xl">
-                  <div className=" -mb-7 pb-1 lg:pb-2 xl:pb-3">
+                  <div className=" -mb-7 pb-1 lg:pb-2">
                     <SplitText
                       text="Arlian Nasrul Ramadhani"
                       className=" text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold   text-slate-800 "
@@ -97,7 +97,7 @@ export default function Home({show}) {
                     />
                   </div>
                   <br></br>
-                  <div className="pb-1 lg:pb-2 xl:pb-3">
+                  <div className="pb-1 lg:pb-2">
                     <SplitText
                       text="Front-End Web Developer"
                       className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-[#6497B1]  "
@@ -126,7 +126,7 @@ export default function Home({show}) {
                       scale={1.0}
                       threshold={0.2}
                     >
-                      <h1 className=" text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-slate-500 transition-all ">
+                      <h1 className=" text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-slate-500 transition-all font-semibold ">
                         {" "}
                         I'm a
                       </h1>
@@ -149,7 +149,7 @@ export default function Home({show}) {
                           "Tech Enthusiast",
                           "Gamer",
                         ]}
-                        mainClassName=" min-w-[205px] max-w-[500px]  text-[#6497B1] overflow-hidden  flex text-center justify-center rounded-lg text-lg lg:text-xl xl:text-2xl 2xl:text-3xl  inline-block transition-all"
+                        mainClassName=" min-w-[205px] max-w-[500px]  text-slate-700  overflow-hidden  flex text-center justify-center rounded-lg text-lg lg:text-xl xl:text-2xl 2xl:text-3xl  inline-block transition-all"
                         staggerFrom={"last"}
                         initial={{ y: "100%", opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
@@ -185,7 +185,7 @@ export default function Home({show}) {
                   >
                     <Magnet padding={50} disabled={false} magnetStrength={2}>
                       <button className="active:scale-80 transition-all cursor-pointer">
-                        <div className="  text-sm border-2 lg:text-lg   border-[#6497B1] p-2 rounded-3xl text-[#6497B1] font-semibold pointer-events-auto hover:bg-[#6497B1] hover:text-white transition">
+                        <div className="  text-sm border-2 lg:text-lg   border-[#6497B1] p-2 rounded-3xl text-slate-500 font-semibold pointer-events-auto hover:bg-[#6497B1] hover:text-white transition">
                           Download Resume
                         </div>
                       </button>
@@ -193,7 +193,7 @@ export default function Home({show}) {
                   </a>
                 </AnimatedContent>
               </div>
-              <div className=" items-center  w-full h-[90vh]  scale-95 lg:scale-100 lg:h-full  -top-6 lg:w-1/2 relative z-0 ">
+              <div className=" items-center translate-x-1/16 lg:translate-x-0 w-full h-[72vh]  scale-85 lg:scale-100 lg:h-full  -top-10 lg:w-1/2 relative z-0 ">
                 <Lanyard position={[0, 0, 23]} gravity={[0, -40, 0]} />
               </div>
             </div>
@@ -252,7 +252,7 @@ export default function Home({show}) {
                   config={{ tension: 80, friction: 20 }}
                   initialOpacity={0.2}
                   animateOpacity
-                  scale={1.1}
+                  scale={1.0}
                   threshold={0.2}
                 >
                   <div className=" text-sm lg:text-lg xl:text-xl 2xl:text-2xl  ">

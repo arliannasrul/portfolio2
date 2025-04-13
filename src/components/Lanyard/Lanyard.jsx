@@ -62,7 +62,7 @@ export default function Lanyard({
     >
       {isSmall && (
         <div
-          className="z-0 fixed bottom-28 left-1/2 transform -translate-x-1/2 
+          className="z-0 fixed bottom-28 left-1/2 transform -translate-x-3/4 
         px-6 py-2 
       text-[#6497b179] text-sm font-medium
     "

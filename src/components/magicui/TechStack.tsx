@@ -54,14 +54,14 @@ export default function AnimatedBeamDemo() {
   }, [isInView]);
   return (
     <div
-      className="  relative flex lg:h-[600px] h-[500px] w-full items-center justify-center overflow-hidden p-16 "
+      className="  relative flex lg:h-[600px] h-[400px] w-full items-center justify-center overflow-hidden p-16 "
       ref={containerRef}
     >
   
     
       
     
-      <div className="flex size-full lg:h-[500px] h-[400px] max-h-[700px] max-w-4xl flex-col items-stretch justify-between gap-12">
+      <div className="flex size-full lg:h-[500px] h-[300px] max-h-[700px] max-w-4xl flex-col items-stretch justify-between gap-12">
         <div className="flex flex-row items-center lg:justify-between justify-center gap-8 sm:gap-20 md:gap-34 lg:gap-40">
    
   
