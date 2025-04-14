@@ -77,7 +77,7 @@ export default function Home({show}) {
         <section id="home" className=" flex justify-center lg:px-18">
           <div className="container">
             <div className="flex flex-wrap ">
-              <div className=" w-full self-center px-4 lg:w-1/2 pt-26 lg:pt-0 pb-6">
+              <div className=" w-full self-center px-4 lg:w-1/2 pt-26 lg:pt-0 pb-6 lg:pl-16">
                 <div className="  text-base   gap-2 font-semibold md:text-xl">
                   <div className=" -mb-7 pb-1 lg:pb-2">
                     <SplitText
@@ -208,7 +208,7 @@ export default function Home({show}) {
                 <div className="pb-2 ">
                   <SplitText
                     text="About Gw"
-                    className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[#6497B1] font-semibold text-center  "
+                    className="text-xl lg:text-2xl xl:text-3xl  text-[#6497B1] font-semibold text-center  "
                     delay={90}
                     animationFrom={{
                       opacity: 0,
@@ -228,14 +228,14 @@ export default function Home({show}) {
                   delay={50}
                   animateBy="words"
                   direction="top"
-                  className="text-sm lg:text-lg xl:text-xl 2xl:text-2xl gap-1 mb-8  "
+                  className="text-sm lg:text-lg xl:text-xl  gap-1 mb-8  "
                 />
               </div>
 
               <div className="w-full  mb-12 lg:w-[25%]  lg:pl-10 lg:border-l-2 border-[#6497B1]">
                 <SplitText
                   text="Get in Touch!"
-                  className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[#6497B1]     font-semibold text-center "
+                  className="text-xl lg:text-2xl xl:text-3xl  text-[#6497B1]     font-semibold text-center "
                   delay={90}
                   animationFrom={{
                     opacity: 0,
@@ -256,7 +256,7 @@ export default function Home({show}) {
                   scale={1.0}
                   threshold={0.2}
                 >
-                  <div className=" text-sm lg:text-lg xl:text-xl 2xl:text-2xl  ">
+                  <div className=" text-sm lg:text-lg xl:text-xl  ">
                     <p className="font-poppins  pt-5 pb-6 max-w-xl">
                       Mari berteman denganku.
                     </p>
