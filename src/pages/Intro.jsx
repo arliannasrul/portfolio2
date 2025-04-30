@@ -6,7 +6,7 @@ const IntroType = ({onFinish}) => {
   const command = 'npm run dev';
   const [text, setText] = useState('');
 
-  const [phase, setPhase] = useState('typing');
+  const [phase, setPhase] = useState('typing');  //ganti typing 
   const [fadeOut, setFadeOut] = useState(false); //animasi fade out ke konten HOME
 
   useEffect(() => {

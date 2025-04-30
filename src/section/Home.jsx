@@ -4,6 +4,9 @@ import RotatingText from "../components/RotatingText/RotatingText.jsx";
 import AnimatedContent from "../Animation/AnimatedContent/AnimatedContent.jsx";
 import BlurText from "../components/BlurText/BlurText.jsx";
 import Magnet from "../components/Magnet/Magnet.jsx";
+import TimelineEdu from "@/components/daisyui/timeline_Edu.jsx";
+import TimelineExp from "@/components/daisyui/timeline_Nr_exp.jsx";
+import TimelineReExp from "@/components/daisyui/timeline_Re_exp.jsx";
 
 import AnimatedBeamDemo from "../components/magicui/TechStack.jsx";
 import GridMotion from "../components/GridMotion.jsx";
@@ -382,10 +385,116 @@ export default function Home({show}) {
             </div>
           </div>
         </section>
+                  
+        <section id="timeline-edu" className=" pt-12 pb-12 px-4 text-center bg-slate-300 ">
+          <div>
+            <div className="pb-6">
+            <SplitText
+              text="Education"
+              className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[#6497B1] lg:px-7  font-semibold text-center "
+              delay={90}
+              animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+              animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+              easing="easeOutCubic"
+              threshold={0.2}
+              rootMargin="-50px"
+            />
+
+            </div>
+            <div className="max-w-5xl mx-auto">
+<AnimatedContent
+  distance={150}
+  direction="vertical"
+  reverse={false}
+  config={{ tension: 80, friction: 20 }}
+  initialOpacity={0.2}
+  animateOpacity
+  scale={1}
+  threshold={0.2}
+>
+<TimelineEdu />
+</AnimatedContent>
+            </div>
+          </div>
+         
+        </section>
+
+        <section id="timeline-related-experience" className=" pt-16 pb-12 px-4 text-center bg-white ">
+          <div>
+            <div className="pb-6">
+            <SplitText
+              text="Related Experience"
+              className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[#6497B1] lg:px-7  font-semibold text-center "
+              delay={90}
+              animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+              animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+              easing="easeOutCubic"
+              threshold={0.2}
+              rootMargin="-50px"
+            />
+
+            </div>
+            <div className="max-w-5xl mx-auto">
+            <AnimatedContent
+  distance={150}
+  direction="vertical"
+  reverse={false}
+  config={{ tension: 80, friction: 20 }}
+  initialOpacity={0.2}
+  animateOpacity
+  scale={1}
+  threshold={0.2}
+>
+<TimelineReExp />
+</AnimatedContent>
+             
+              
+            </div>
+           
+          </div>
+         
+        </section>
+
+        <section id="timeline-nonrelated-experience" className=" pt-12 pb-12 px-4 text-center bg-white ">
+          <div>
+            <div className="pb-6">
+            <SplitText
+              text="Non-Related Experience"
+              className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-[#6497B1] lg:px-7  font-semibold text-center "
+              delay={90}
+              animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+              animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+              easing="easeOutCubic"
+              threshold={0.2}
+              rootMargin="-50px"
+            />
+
+            </div>
+            <div className="max-w-5xl mx-auto">
+            <AnimatedContent
+  distance={150}
+  direction="vertical"
+  reverse={false}
+  config={{ tension: 80, friction: 20 }}
+  initialOpacity={0.2}
+  animateOpacity
+  scale={1}
+  threshold={0.2}
+>
+<TimelineExp />
+</AnimatedContent>
+              
+              
+            </div>
+           
+          </div>
+         
+        </section>
+
 
         <section
           id="techstack"
-          className=" pt-12 pb-12 px-4 text-center bg-slate-300"
+          className=" pt-16 pb-12 px-4 text-center bg-slate-300"
         >
           <div className="pb-6">
             <SplitText
