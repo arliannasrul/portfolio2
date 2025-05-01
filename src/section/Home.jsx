@@ -386,7 +386,7 @@ export default function Home({show}) {
           </div>
         </section>
                   
-        <section id="timeline-edu" className=" pt-12 pb-12 px-4 text-center bg-slate-300 ">
+        <section id="timeline-edu" className=" pt-12 pb-12 px-4 text-center bg-slate-100 ">
           <div>
             <div className="pb-6">
             <SplitText
@@ -494,7 +494,7 @@ export default function Home({show}) {
 
         <section
           id="techstack"
-          className=" pt-16 pb-12 px-4 text-center bg-slate-300"
+          className=" pt-16 pb-12 px-4 text-center bg-slate-100"
         >
           <div className="pb-6">
             <SplitText
