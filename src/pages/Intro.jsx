@@ -31,7 +31,7 @@ const IntroType = ({onFinish}) => {
                 }, 1000); // waktu fade out
               }, 3500); // durasi animasi loading
   
-            }, 2500); // delay setelah selesai ngetik
+            }, 1000); // delay setelah selesai ngetik
           }
   
           return prev + nextChar;

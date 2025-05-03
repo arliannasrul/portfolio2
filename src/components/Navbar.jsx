@@ -93,7 +93,7 @@ export default function Navbar() {
                         { href: "#home", text: "Home" },
                         { href: "#sertification", text: "Sertification" },
                         { href: "#techstack", text: "Tech Stack" },
-                        { href: "#timeline-related-experience", text: "Experience" },
+                        { href: "#timeline", text: "Experience" },
                         { href: "#portfolio", text: "Portfolio" },
                         { href: "#contact", text: "Contact" },
                       ].map((item) => (
