@@ -20,7 +20,7 @@ export default function TimelineExp () {
       
       <h2 className=" lg:text-xl font-semibold">Maxim</h2>
       <div className="text-slate-600 ">Mitra Driver </div>
-      <div className="font-mono italic text-sm pb-3">2024 - Sekarang</div>
+      <div className="font-mono italic text-sm pb-3"> Februari 2024 - Sekarang</div>
      
       <p className="">
     Bekerja paruh waktu sebagai driver Maxim, selama bekerja paruh waktu sebagai driver maxim saya belajar untuk mengatur waktu dengan baik dikarenakan saya harus membagi waktu antara kuliah dan bekerja. Selain itu, saya juga belajar untuk berkomunikasi dengan baik kepada penumpang yang saya antar, dan saya juga belajar untuk bersabar dalam menghadapi berbagai macam karakter penumpang yang saya antar. Saya juga belajar untuk mengatur keuangan dengan baik, karena saya harus mengatur pengeluaran dan pemasukan selama bekerja paruh waktu sebagai driver maxim untuk membayar biaya kuliah sendiri.
