@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import MusicPlayer from "../components/MusicPlayer";
+import DarkModeToggle from "./darkModeToggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,10 +21,10 @@ export default function Navbar() {
 
   return (
     <>
-      <div>
+      <div className="">
         {/* Overlay gelap saat navbar dibuka pointer-events-none = mencegah interaksi dengan elemen lain */}
         <div
-          className={`fixed z-40 lg:hidden inset-0 transition-all bg-black/60 duration-300 ease-in ${
+          className={`fixed z-40 lg:hidden inset-0 transition-all bg-black/60  duration-300 ease-in ${
             isOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
@@ -36,9 +37,10 @@ export default function Navbar() {
             ${
               isScrolled
                 ? "backdrop-blur-md bg-white/20 shadow-lg"
-                : "bg-white/40 backdrop-blur-sm"
-            }`}
+                : "bg-white/40 backdrop-blur-sm dark:bg-slate-800/40"
+            }  `}
         >
+
           <div className="container px-4 lg:px-12 max-w-screen-xl mx-auto">
             <div className="flex items-center justify-between relative">
               {/* Logo dengan animasi dan efek hover */}
@@ -46,7 +48,7 @@ export default function Navbar() {
                 <a
                   href="#home"
                   className="font-bold text-lg block py-2 xl:text-xl 2xl:text-2xl 
-                     text-[#6497B1]   
+                     text-[#6497B1] dark:text-[#82c4e5]
                     hover:scale-105 transition-all duration-300 ease-in-out"
                 >
                   Nas
@@ -76,22 +78,24 @@ export default function Navbar() {
                   ></div>
                 </button>
 
+
                 <div>
+                
                   {/* Navigation Menu */}
                   <div
-                    className={` fixed lg:static top-0 right-0 h-screen lg:h-auto
-                    backdrop-blur-xl lg:backdrop-blur-none bg-white lg:bg-transparent
+                    className={`  fixed lg:static top-0 right-0 h-screen lg:h-auto
+                    backdrop-blur-xl lg:backdrop-blur-none bg-white dark:bg-slate-950 lg:bg-transparent dark:lg:bg-transparent
                   lg:w-auto transition-all duration-500 ease-in-out w-[40vw] min-w-[290px]
-                    p-4 lg:p-0 pt-14 lg:pt-0
+                    p-4 lg:p-0  lg:pt-4
                     shadow-2xl drop-shadow-xl lg:shadow-none
                     z-55
                     ${isOpen ? "translate-x-0" : "translate-x-full lg:translate-x-0"}
                     lg:flex lg:items-center`}
                   >
-                    <ul className=" flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:space-x-8 ">
+                  
+                    <ul className=" flex flex-col lg:flex-row space-y-3 lg:space-y-0 lg:space-x-8  ">
                       {[
                         { href: "#home", text: "Home" },
-                        { href: "#sertification", text: "Sertification" },
                         { href: "#techstack", text: "Tech Stack" },
                         { href: "#timeline", text: "Experience" },
                         { href: "#portfolio", text: "Portfolio" },
@@ -100,10 +104,10 @@ export default function Navbar() {
                         <li key={item.href} className="group">
                           <a
                             href={item.href}
-                            className="  text-lg lg:text-xl text-gray-700 
+                            className="  text-lg lg:text-xl text-gray-700 dark:text-slate-200
                             relative overflow-hidden block
                             hover:text-[#6497B1] t duration-300
-                            py-2 px-4 rounded-lg hover:bg-blue-50/50
+                            py-2 px-4 rounded-lg 
                             group-hover:scale-105 transform transition-all"
                           >
                             {item.text}
@@ -113,8 +117,14 @@ export default function Navbar() {
                             transition-transform duration-300"
                             />
                           </a>
+                          
                         </li>
                       ))}
+                       <div className="pb-6 pl-4">
+                        <DarkModeToggle />
+                      </div>
+                     
+                      
                     </ul>
 
                     {/* Music Player dengan styling baru */}

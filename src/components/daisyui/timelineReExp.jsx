@@ -19,17 +19,17 @@ export default function TimelineReExp () {
     <div className="timeline-start text-start mb-10 md:text-end">
       
       <h2 className=" lg:text-xl font-semibold">Universitas Merdeka Malang</h2>
-      <div className="text-slate-600 ">Kerja Kelompok </div>
+      <div className="text-slate-600 dark:text-slate-400 ">Kerja Kelompok </div>
       <div className="font-mono italic text-sm pb-3">2023 - Sekarang</div>
      
       <p className="">
     Berdiksusi dengan teman-teman tentang tugas yang diberikan dosen, dan mengerjakan tugas tersebut secara bersama-sama. Saya juga sering membantu teman-teman saya dalam mengerjakan tugas yang diberikan dosen, dan saya juga sering meminta bantuan kepada teman-teman saya jika saya mengalami kesulitan dalam mengerjakan tugas tersebut.
       </p>
     </div>
-    <hr />
+    <hr className="bg-black dark:bg-white transition-colors duration-400"/>
   </li>
   <li>
-    <hr />
+    <hr className="bg-black dark:bg-white transition-colors duration-400"/>
     <div className="timeline-middle">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -46,12 +46,12 @@ export default function TimelineReExp () {
     </div>
     <div className="timeline-end text-start  md:mb-10">
     <h2 className=" lg:text-xl font-semibold">Rumah</h2>
-    <div className="text-slate-600 ">Turu</div>
+    <div className="text-slate-600 dark:text-slate-400">Turu</div>
     <div className="font-mono italic text-sm pb-3">2003 - Sekarang</div>
       
      Turu membuat badan saya menjadi sehat dan bugar, karena tidur yang cukup sangat penting untuk kesehatan tubuh kita. Tidur yang cukup juga dapat meningkatkan konsentrasi dan daya ingat kita, sehingga kita dapat belajar dengan lebih baik. Selain itu, tidur yang cukup juga dapat meningkatkan mood kita, sehingga kita dapat beraktivitas dengan lebih baik.
     </div>
-    <hr />
+    <hr className="bg-black dark:bg-white transition-colors duration-400"/>
   </li>
 
   

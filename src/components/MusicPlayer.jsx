@@ -117,9 +117,9 @@ export default function MusicPlayer() {
   };
 
   return (
-    <div className="fixed bottom-[6vh] left-0 right-0 lg:translate-y-[95vh] lg:hidden">
+    <div className="fixed bottom-[6vh] left-0 right-0 lg:translate-y-[95vh] lg:hidden ">
       {/* Player Controls */}
-      <div className="min-h-24 max-h-24 relative z-20 grid items-center grid-cols-6 gap-2 lg:bg-slate-200 lg:rounded-t-2xl bg-white p-2 pr-4 border-y-1 lg:border-1 border-[#6497b1]">
+      <div className="min-h-24 max-h-24 relative z-20 grid items-center grid-cols-6 gap-2 lg:bg-slate-200 lg:rounded-t-2xl transition-all duration-300  p-2 pr-4 border-y-1 lg:border-1 border-[#6497b1]">
         <audio
           ref={audioRef}
           preload="none"
@@ -133,7 +133,7 @@ export default function MusicPlayer() {
           <p className="text-xs font-semibold">
             {songs[currentSongIndex].title}
           </p>
-          <p className="text-[10px] text-gray-500">
+          <p className="text-[10px] text-gray-500 dark:text-gray-300">
             {songs[currentSongIndex].artist}
           </p>
         </div>
@@ -162,17 +162,17 @@ export default function MusicPlayer() {
             style={{ width: `${(currentTime / duration) * 100}%` }}
           />
         </div>
-        <div className="flex justify-between text-xs text-gray-500 mt-1 ">
+        <div className="flex justify-between text-xs text-gray-500 dark:text-gray-300 mt-1 ">
           <span>{formatTime(currentTime)}</span>
           <span>/{formatTime(duration)}</span>
         </div>
       </div>
 
       {/* Show Playlist Button */}
-      <div className="relative z-20 text-center bg-white border-[#6497b1]">
+      <div className="relative z-20 text-center bg-transparent  border-[#6497b1]">
         <button
           onClick={() => setShowPlaylist(!showPlaylist)}
-          className="w-3/4 px-4 py-2 text-sm border-b-1 rounded-b-2xl border-x-1 border-[#6497b1] text-gray-600 hover:text-[#6497b1] transition-colors hover:bg-gray-50 active:scale-95 transform duration-150"
+          className="w-3/4 px-4 py-2 text-sm border-b-1 rounded-b-2xl border-x-1 border-[#6497b1] text-gray-600 dark:text-gray-300 hover:text-[#6497b1] transition-all hover:bg-gray-50 dark:hover:bg-slate-800 active:scale-95 transform duration-300"
         >
           {showPlaylist ? "Hide Playlist" : "Show Playlist"}
         </button>
@@ -180,7 +180,7 @@ export default function MusicPlayer() {
 
       {/* Playlist Panel */}
       <div
-        className={`relative z-10 bg-white border-b-1 border-[#6497b1] overflow-y-scroll transition-all duration-300 ease-in-out ${
+        className={`relative z-10 border-b-1 border-[#6497b1] overflow-y-scroll transition-all duration-300 ease-in-out ${
           showPlaylist ? "max-h-[25vh] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -196,12 +196,12 @@ export default function MusicPlayer() {
               className={`w-full flex items-center p-2 rounded-lg transform transition-all duration-200 hover:scale-[0.99] ${
                 currentSongIndex === index
                   ? "bg-blue-50 text-[#6497b1]"
-                  : "hover:bg-gray-50"
+                  : "hover:bg-gray-50 dark:hover:bg-gray-800"
               }`}
             >
               <div className="flex-1 text-left">
                 <p className="text-sm">{song.title}</p>
-                <p className="text-xs text-gray-500">{song.artist}</p>
+                <p className="text-xs text-gray-500 dark:text-gray-300">{song.artist}</p>
               </div>
               {currentSongIndex === index && isPlaying && (
                 <div className="w-4 h-4 rounded-full bg-[#6497b1] flex items-center justify-center">

@@ -76,7 +76,7 @@ export default function Home({show}) {
     }`}>
       <div className="">
         
-        <section id="home" className=" flex justify-center lg:px-18">
+        <section id="home" className=" flex justify-center lg:px-18 bg-white dark:bg-slate-900 transition-colors">
           <div className="container">
             <div className="flex flex-wrap ">
               <div className=" w-full self-center px-4 lg:w-1/2 pt-26 lg:pt-0 pb-6 lg:pl-16">
@@ -84,7 +84,7 @@ export default function Home({show}) {
                   <div className=" -mb-7 pb-1 lg:pb-2">
                     <SplitText
                       text="Arlian Nasrul Ramadhani"
-                      className=" text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold   text-slate-800 "
+                      className=" text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold   text-slate-800 dark:text-slate-400 "
                       delay={50}
                       animationFrom={{
                         opacity: 0,
@@ -103,7 +103,7 @@ export default function Home({show}) {
                   <div className="pb-1 lg:pb-2">
                     <SplitText
                       text="Front-End Web Developer"
-                      className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-[#6497B1]  "
+                      className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-[#6497B1] dark:text-[#82c4e5] "
                       delay={90}
                       animationFrom={{
                         opacity: 0,
@@ -129,7 +129,7 @@ export default function Home({show}) {
                       scale={1.0}
                       threshold={0.2}
                     >
-                      <h1 className=" text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-slate-500 transition-all font-semibold ">
+                      <h1 className=" text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-slate-500 dark:text-slate-400 transition-all font-semibold ">
                         {" "}
                         I'm a
                       </h1>
@@ -152,7 +152,7 @@ export default function Home({show}) {
                           "Tech Enthusiast",
                           "Gamer",
                         ]}
-                        mainClassName=" min-w-[205px] max-w-[500px]  text-slate-700  overflow-hidden  flex text-center justify-center rounded-lg text-lg lg:text-xl xl:text-2xl 2xl:text-3xl  inline-block transition-all"
+                        mainClassName=" min-w-[205px] max-w-[500px]  text-slate-700 dark:text-slate-500 overflow-hidden  flex text-center justify-center rounded-lg text-lg lg:text-xl xl:text-2xl 2xl:text-3xl  inline-block transition-all"
                         staggerFrom={"last"}
                         initial={{ y: "100%", opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
@@ -188,7 +188,7 @@ export default function Home({show}) {
                   >
                     <Magnet padding={50} disabled={false} magnetStrength={2}>
                       <button className="active:scale-80 transition-all cursor-pointer">
-                        <div className="  text-sm border-2 lg:text-lg   border-[#6497B1] p-2 rounded-3xl text-slate-500 font-semibold pointer-events-auto hover:bg-[#6497B1] hover:text-white transition">
+                        <div className="  text-sm border-2 lg:text-lg   border-[#6497B1] p-2 rounded-3xl text-slate-500 dark:text-slate-300 font-semibold pointer-events-auto hover:bg-[#6497B1] hover:text-white transition">
                           Download Resume
                         </div>
                       </button>
@@ -203,7 +203,7 @@ export default function Home({show}) {
           </div>
         </section>
 
-        <section id="about" className="pb-20 flex px-4">
+        <section id="about" className="pb-20 flex px-4 bg-white dark:bg-slate-900 transition-colors">
           <div className="  ">
             <div className="flex flex-wrap justify-between items-center lg:px-36 ">
               <div className="w-full  mb-10 lg:w-[75%] ">
@@ -385,7 +385,7 @@ export default function Home({show}) {
           </div>
         </section>
                   
-        <section id="timeline" className="  pt-16 pb-12 px-4 text-center bg-slate-100 ">
+        <section id="timeline" className="  pt-16 pb-12 px-4 text-center bg-slate-100 dark:bg-slate-950 transition-colors">
           <div>
             <div className="pb-6">
             <SplitText

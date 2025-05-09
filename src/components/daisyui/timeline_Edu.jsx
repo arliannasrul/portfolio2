@@ -7,7 +7,7 @@ export default function TimelineEdu () {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        className="h-5 w-5"
+        className="h-5 w-5 "
       >
         <path
           fillRule="evenodd"
@@ -19,17 +19,17 @@ export default function TimelineEdu () {
     <div className="timeline-start text-start mb-10 md:text-end">
       
       <h2 className=" lg:text-xl font-semibold">Universitas Merdeka Malang</h2>
-      <div className="text-slate-600 ">S1 - Sistem Informasi</div>
+      <div className="text-slate-600 dark:text-slate-400 ">S1 - Sistem Informasi</div>
       <div className="font-mono italic text-sm pb-3">2023 - Sekarang</div>
      
       <p className="">
     Mempelajari Analisis Sistem, Rekayasa Perangkat Lunak, Sistem Database, Algoritma dan Struktur Data, Pemrograman Website dan lain-lain. Disini saya berfokus pada pengembangan website baik front-end maupun back-end dengan IPK saat ini 3.88
       </p>
     </div>
-    <hr />
+    <hr className="bg-black dark:bg-white transition-colors duration-400"/>
   </li>
   <li>
-    <hr />
+    <hr className="bg-black dark:bg-white transition-colors duration-400"/>
     <div className="timeline-middle">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -46,12 +46,12 @@ export default function TimelineEdu () {
     </div>
     <div className="timeline-end text-start  md:mb-10">
     <h2 className=" lg:text-xl font-semibold">SMK Negeri 4 Malang</h2>
-    <div className="text-slate-600 ">Multimedia</div>
+    <div className="text-slate-600 dark:text-slate-400 ">Multimedia</div>
     <div className="font-mono italic text-sm pb-3">2019 - 2023</div>
       
      Mempelajari tentang multimedia, seperti desain grafis, video editing, UI/UX dan animasi 2D. Disini saya belajar banyak tentang dunia multimedia, dan saya juga belajar untuk bekerja sama dengan tim dalam membuat konten yang berkualitas. Saya juga belajar untuk berkomunikasi dengan baik kepada atasan dan rekan kerja, serta belajar untuk mengatur waktu dengan baik dalam menyelesaikan tugas yang diberikan.
     </div>
-    <hr />
+    <hr className="bg-black dark:bg-white transition-colors duration-400"/>
   </li>
 
   
