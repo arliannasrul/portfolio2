@@ -11,7 +11,7 @@ const IntroType = ({ onFinish }) => {
       const doneTimeout = setTimeout(() => {
         setPhase('done');
         onFinish?.();
-      }, 1000); // durasi fade out
+      }, 100); // durasi fade out
 
       return () => clearTimeout(doneTimeout);
     }, 3500); // durasi loading
@@ -22,7 +22,7 @@ const IntroType = ({ onFinish }) => {
   if (phase === 'done') return null;
 
   return (
-    <div className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-white dark:bg-slate-900 text-xl lg:text-2xl transition-all duration-1000 ${fadeOut ? 'opacity-0 -translate-y-40' : 'opacity-100 translate-y-0'}`}>
+    <div className={`fixed inset-0 z-50 flex flex-col items-center justify-center not-dark:bg-white  dark:bg-slate-900 text-xl lg:text-2xl transition-all duration-400 ${fadeOut ? 'opacity-0 -translate-y-90' : 'opacity-100 translate-y-0'}`}>
       <div className="flex flex-col items-center gap-2 mt-6">
         <p className="text-lg lg:text-3xl font-poppins text-slate-600 dark:text-slate-300">Running Portfolio Website 🚀</p>
         <div className="flex gap-1 pt-2">

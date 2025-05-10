@@ -40,6 +40,7 @@ export default function Navbar() {
                 : "bg-white/40 backdrop-blur-sm dark:bg-slate-800/40"
             }  `}
         >
+          
 
           <div className="container px-4 lg:px-12 max-w-screen-xl mx-auto">
             <div className="flex items-center justify-between relative">

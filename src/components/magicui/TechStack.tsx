@@ -5,6 +5,7 @@ import React, { forwardRef, useRef, useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "../magicui/animated-beam";
 import Icons from "../../assets/data/Icons";
+import { useInView } from "framer-motion";
 
 
 const Circle = forwardRef<
@@ -15,7 +16,7 @@ const Circle = forwardRef<
     <div
       ref={ref}
       className={cn(
-        "z-20 flex size-14 hover:scale-150 transition-all lg:size-20  duration-300 items-center justify-center rounded-full border-2 bg-white  p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+        "z-20 flex size-14 hover:scale-150 transition-all lg:size-20  duration-300 items-center justify-center rounded-full border-2 bg-white dark:bg-slate-700  p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
         className,
       )}
     >
@@ -25,7 +26,7 @@ const Circle = forwardRef<
 });
 
 Circle.displayName = "Circle";
-import { useInView } from "framer-motion";
+
 
 export default function AnimatedBeamDemo() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -52,6 +53,9 @@ export default function AnimatedBeamDemo() {
       setVisible(true);
     }
   }, [isInView]);
+
+
+
   return (
     <div
       className="  relative flex lg:h-[600px] h-[400px] w-full items-center justify-center overflow-hidden p-16 "
@@ -179,11 +183,13 @@ export default function AnimatedBeamDemo() {
         toRef={div4Ref}
         curvature={-75}
         endYOffset={-10}
+
       />
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div2Ref}
         toRef={div4Ref}
+       
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -191,6 +197,7 @@ export default function AnimatedBeamDemo() {
         toRef={div4Ref}
         curvature={75}
         endYOffset={10}
+      
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -199,12 +206,14 @@ export default function AnimatedBeamDemo() {
         curvature={-75}
         endYOffset={-10}
         reverse
+    
       />
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div6Ref}
         toRef={div4Ref}
         reverse
+      
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -212,6 +221,7 @@ export default function AnimatedBeamDemo() {
         toRef={div4Ref}
         curvature={75}
         endYOffset={10}
+       
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -220,6 +230,7 @@ export default function AnimatedBeamDemo() {
         curvature={75}
         endYOffset={10}
         reverse
+       
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -228,6 +239,7 @@ export default function AnimatedBeamDemo() {
         curvature={75}
         endYOffset={10}
         reverse
+       
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -235,6 +247,7 @@ export default function AnimatedBeamDemo() {
         toRef={div4Ref}
         curvature={-75}
         endYOffset={10}
+      
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -243,7 +256,9 @@ export default function AnimatedBeamDemo() {
         curvature={-75}
         endYOffset={10}
         reverse
+     
       />
+
     </div>
   );
 }

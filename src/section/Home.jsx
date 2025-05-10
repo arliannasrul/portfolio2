@@ -16,7 +16,7 @@ import { useEffect, useState } from "react";
 // DETEKSI EVAL JIKA TERPAKAI
 
 export default function Home({show}) {
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState(true);
 
   useEffect(() => {
     if (show) {
@@ -68,14 +68,14 @@ export default function Home({show}) {
     // Add more items as needed
   ];
 
-  
+   
   return (
    
     <div     className={`transition-all duration-700 ${
       mounted ? 'opacity-100 ' : 'opacity-0'
     }`}>
       <div className="">
-        
+      
         <section id="home" className=" flex justify-center lg:px-18 bg-white dark:bg-slate-900 transition-colors">
           <div className="container">
             <div className="flex flex-wrap ">
@@ -202,7 +202,7 @@ export default function Home({show}) {
             </div>
           </div>
         </section>
-
+        
         <section id="about" className="pb-20 flex px-4 bg-white dark:bg-slate-900 transition-colors">
           <div className="  ">
             <div className="flex flex-wrap justify-between items-center lg:px-36 ">
@@ -424,7 +424,7 @@ export default function Home({show}) {
 
         <section
           id="techstack"
-          className=" pt-16 pb-12 px-4 text-center bg-slate-200"
+          className=" pt-16 pb-12 px-4 text-center bg-slate-200 dark:bg-slate-900 transition-colors"
         >
           <div className="pb-6">
             <SplitText
